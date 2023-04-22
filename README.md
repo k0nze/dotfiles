@@ -9,6 +9,8 @@ mkdir -p .config
 ln -s ${DOTFILES_REPO}/.config/yabai ~/.config/yabi
 ln -s ${DOTFILES_REPO}/.config/skhd ~/.config/skhd
 ln -s ${DOTFILES_REPO}/.tmux.conf ~/.tmux.conf
+mkdir -p .config/karabiner
+ln -s ${DOTFILES_REPO}/.config/karabiner ~/.config/karabiner/karabiner.json
 ```
 
 ```
