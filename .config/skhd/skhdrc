@@ -1,15 +1,21 @@
+# ignores ralt + q (passed through to karabiner to typ @ on a non-Apple keyboard)
+ralt - q -> : 
+
 # changing windows focus within a space
+lalt - h : yabai -m window --focus west
 lalt - j : yabai -m window --focus south
 lalt - k : yabai -m window --focus north
-lalt - h : yabai -m window --focus west
 lalt - l : yabai -m window --focus east
 
 # flip layout along y-axis
 shift + lalt - y : yabai -m space --mirror y-axis
 shift + lalt - x : yabai -m space --mirror x-axis
 
-# ignores ralt + q (passed through to karabiner to typ @ on a non-Apple keyboard)
-ralt - q -> : 
+# swap windows
+lctrl - h : yabai -m window --swap west
+lctrl - j : yabai -m window --swap south
+lctrl - k : yabai -m window --swap north
+lctrl - l : yabai -m window --swap east
 
 # move focused windows to next space
 shift + lalt - l : yabai -m window --space next; yabai -m space --focus next
