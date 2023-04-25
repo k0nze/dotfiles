@@ -6,7 +6,7 @@
 git clone git@github.com:k0nze/dotfiles.git ${DOTFILES_REPO}
 cd $HOME
 mkdir -p .config
-ln -s ${DOTFILES_REPO}/.config/yabai ~/.config/yabi
+ln -s ${DOTFILES_REPO}/.config/yabai ~/.config/yabai
 ln -s ${DOTFILES_REPO}/.config/skhd ~/.config/skhd
 ln -s ${DOTFILES_REPO}/.tmux.conf ~/.tmux.conf
 mkdir -p .config/karabiner

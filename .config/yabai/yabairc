@@ -26,3 +26,5 @@ yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^1Password$" manage=off
+yabai -m rule --add app="^Seafile$" manage=off
+yabai -m rule --add app="^Microsoft Teams$" manage=off
