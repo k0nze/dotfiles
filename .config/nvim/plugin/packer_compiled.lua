@@ -88,6 +88,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/konze/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["vim-maximizer"] = {
+    loaded = true,
+    path = "/Users/konze/.local/share/nvim/site/pack/packer/start/vim-maximizer",
+    url = "https://github.com/szw/vim-maximizer"
   }
 }
 

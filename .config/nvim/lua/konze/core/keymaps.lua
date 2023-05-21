@@ -14,3 +14,21 @@ keymap.set("n", "<leader>=", "<C-w>=")
 -- close current split window
 keymap.set("n", "<C-d>", ":close<CR>")
 
+-- move to window above
+keymap.set("n", "<leader>k", "<C-w><up>")
+-- move to window below
+keymap.set("n", "<leader>j", "<C-w><down>")
+-- move to window on the left
+keymap.set("n", "<leader>l", "<C-w><right>")
+-- move to window on the right
+keymap.set("n", "<leader>h", "<C-w><left>")
+-- maximize / restore current window (vim-maximizer)
+keymap.set("n", "<leader>m", ":MaximizerToggle<CR>")
+
+
+
+-- save file
+keymap.set("n", "<leader>s", ":w<CR>")
+-- close file
+keymap.set("n", "<leader>q", ":q<CR>")
+
