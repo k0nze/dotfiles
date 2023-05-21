@@ -1,5 +1,53 @@
 # Konze's dotfiles
 
+## zsh setup
+
+install OhMyZsh:
+```
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+```
+
+install powerlevel10k:
+```
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+change theme in `.zshrc`:
+```
+ZSH_THEME="powerlevel10k/powerlevel10k"
+```
+configure:
+```
+yyyy
+Prompt Style: (3) Rainbow
+Character Set: (1) Unicode
+Show current time: (2) 24-hour-format
+Prompt separators: (3) Slanted
+Prompt Heads: (1) Sharp
+Prompt Tails: (1) Flat
+Prompt Height: (2) Two lines
+Prompt Connection: (2) Dotted
+Prompt Frame: (2) Left
+Connection & Frame Color: (2) Light
+Prompt Spacing: (1) Compact
+Icons: (2) Many Icons
+Prompt Flow: (1) Concise
+Enable Transient Flow: (n)
+Instant Prompt Mode: (2) Quiet
+Y
+```
+
+install zsh-autosuggestions:
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+add to OhMyZsh plugins in `.zshrc`:
+```
+plugins=( 
+    # other plugins...
+    zsh-autosuggestions
+)
+```
+
 ## Setup macOS
 
 ```
@@ -73,8 +121,16 @@ brew install neovim
 * `[space]+[l]`: change focus to the next windows on the right (east)
 
 ### Increase Size of Currently Focused Window
+
 * `[space]+[m]`: maximize / restore current window size 
 
+### Add / Remove Comments
+
+* `[g]+[c]+[c]`: add / remove comment for current line
+* `[g]+[c]+[NUM]+[j]`: add / remove comment for current and NUM lines below
+* `[g]+[b]`: add / remove block comment for current selection
+
+[https://github.com/numToStr/Comment.nvim#configuration-optional](https://github.com/numToStr/Comment.nvim#configuration-optional)
 
 ### Save and Close
 

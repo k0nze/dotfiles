@@ -5,6 +5,9 @@ local keymap = vim.keymap -- for conciseness
 -- if a char is deleted with x the deleted char is not stored in a register
 --keymap.set("n", "x", "_x")
 
+-- leave insert mode
+-- TODO keymap.set("n", "<leader>c", "<C-c>")
+
 -- split windows vertically
 keymap.set("n", "<leader>%", "<C-w>v")
 -- split windows horizontally
@@ -26,9 +29,11 @@ keymap.set("n", "<leader>h", "<C-w><left>")
 keymap.set("n", "<leader>m", ":MaximizerToggle<CR>")
 
 
-
 -- save file
 keymap.set("n", "<leader>s", ":w<CR>")
 -- close file
 keymap.set("n", "<leader>q", ":q<CR>")
+
+-- nvim-tree
+keymap.set("n", "<leader>o", ":NvimTreeToggle<CR>")
 

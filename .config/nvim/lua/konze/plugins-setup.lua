@@ -31,6 +31,9 @@ return packer.startup(function(use)
     -- packer can manage itself
     use("wbthomason/packer.nvim")
 
+    -- lua functions for other plugins
+    use("nvim-lua/plenary.nvim")
+
     -- color scheme
     use("tjdevries/colorbuddy.nvim")
     use("svrana/neosolarized.nvim")
@@ -40,6 +43,12 @@ return packer.startup(function(use)
     
     -- maximize vim windows
     use("szw/vim-maximizer")
+
+    -- line and block comments
+    use("numToStr/Comment.nvim")
+
+    -- file explorer
+    use("nvim-tree/nvim-tree.lua")
 
     if packer_bootstrap then
         require("packer").sync()
