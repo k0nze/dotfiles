@@ -6,11 +6,11 @@ local keymap = vim.keymap -- for conciseness
 --keymap.set("n", "x", "_x")
 
 -- split windows vertically
-keymap.set("n", "<leader>y", "<C-w>v")
+keymap.set("n", "<leader>%", "<C-w>v")
 -- split windows horizontally
-keymap.set("n", "<leader>x", "<C-w>s")
+keymap.set("n", '<leader>"', "<C-w>s")
 -- make split windows equal width
 keymap.set("n", "<leader>=", "<C-w>=")
 -- close current split window
-keymap.set("n", "<leader>q", ":close<CR>")
+keymap.set("n", "<C-d>", ":close<CR>")
 

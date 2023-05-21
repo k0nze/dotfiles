@@ -16,8 +16,12 @@ ln -s ${DOTFILES_REPO}/.config/karabiner ~/.config/karabiner/karabiner.json
 ```
 brew install koekeishiya/formulae/yabai
 brew install yabai
+yabai --start-service
+brew install koekeishiya/formulae/skhd
 brew install skhd
+skhd --start-service
 brew install tmux
+brew install neovim
 ```
 
 # Cheat Sheet
@@ -49,4 +53,17 @@ brew install tmux
 * `[shift]+[left alt]+[j]` decrease window from the top
 * `[shift]+[left alt]+[k]` decrease window from the bottom
 * `[shift]+[left alt]+[l]` decrease window from the left
+
+## neovim
+### Splitting a Window 
+* `[space]+[%]` split window vertically
+* `[space]+["]` split window horizontally
+* `[space]+[=]` make splitted windows equal width
+* `[ctrl]+[d]` close splitted window 
+
+## tmux
+### Splitting a Window
+* `[ctrl]+[b]+[%]` split window vertically
+* `[ctrl]+[b]+["]` split window horizontally
+* `[ctrl]+[d]` close splitted window 
 
