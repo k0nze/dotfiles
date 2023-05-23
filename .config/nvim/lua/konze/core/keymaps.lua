@@ -37,3 +37,6 @@ keymap.set("n", "<leader>q", ":q<CR>")
 -- nvim-tree
 keymap.set("n", "<leader>o", ":NvimTreeToggle<CR>")
 
+-- disable recording
+keymap.set("n", "q", "<Nop>")
+
