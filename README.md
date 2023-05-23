@@ -130,6 +130,15 @@ brew install neovim
 * `[g]+[c]+[NUM]+[j]`: add / remove comment for current and NUM lines below
 * `[g]+[b]`: add / remove block comment for current selection
 
+### File Explorer
+
+* `[space]+[o]`: open and close file explorer 
+* `[a]`: add a new file when in the file explorer window 
+
+### Telescope Fuzzy Finding
+
+* TODO 
+
 [https://github.com/numToStr/Comment.nvim#configuration-optional](https://github.com/numToStr/Comment.nvim#configuration-optional)
 
 ### Save and Close
