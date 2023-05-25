@@ -5,4 +5,4 @@ require("konze.core.colorscheme")
 require("konze.plugins.comment")
 require("konze.plugins.nvim-tree")
 require("konze.plugins.lualine")
-
+require("konze.plugins.telescope")

@@ -68,8 +68,7 @@ yabai --start-service
 brew install koekeishiya/formulae/skhd
 brew install skhd
 skhd --start-service
-brew install tmux
-brew install neovim
+brew install tmux neovim ripgrep fd
 ```
 
 # Cheat Sheet
