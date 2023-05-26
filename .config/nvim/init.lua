@@ -7,4 +7,9 @@ require("konze.plugins.nvim-tree")
 require("konze.plugins.lualine")
 require("konze.plugins.telescope")
 require("konze.plugins.nvim-cmp")
+require("konze.plugins.lsp.mason")
+require("konze.plugins.lsp.lspconfig")
+require("konze.plugins.lsp.barbecue")
+
+print("nvim ready!")
 

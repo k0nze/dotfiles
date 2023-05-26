@@ -67,8 +67,20 @@ return packer.startup(function(use)
 
     -- snippets
     use("L3MON4D3/LuaSnip") -- snippet engine
-    use("saadparwaiz1/cmp_luasnip") -- for autocompletion
+    use("saadparwaiz1/cmp_luasnip") -- for auto completion
     use("rafamadriz/friendly-snippets") -- useful snippets
+
+    -- managing and adding lsp servers
+    use("williamboman/mason.nvim")
+    use("williamboman/mason-lspconfig.nvim")
+
+    -- configuring lsp servers
+    use("neovim/nvim-lspconfig")
+    use("hrsh7th/cmp-nvim-lsp")
+    use("onsails/lspkind.nvim") -- add icons to auto completion
+
+    use("SmiteshP/nvim-navic")
+    use("utilyre/barbecue.nvim")
 
     if packer_bootstrap then
         require("packer").sync()

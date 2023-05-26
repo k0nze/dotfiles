@@ -46,3 +46,4 @@ keymap.set("n", "ts", "<cmd>Telescope live_grep<cr>") -- find string in current 
 keymap.set("n", "tc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "tb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "th", "<cmd>Telescope help_tags<cr>") -- list available help tags
+

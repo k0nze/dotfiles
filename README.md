@@ -68,7 +68,7 @@ yabai --start-service
 brew install koekeishiya/formulae/skhd
 brew install skhd
 skhd --start-service
-brew install tmux neovim ripgrep fd
+brew install tmux neovim ripgrep fd npm
 ```
 
 # Cheat Sheet
@@ -121,10 +121,15 @@ brew install tmux neovim ripgrep fd
 
 * `[space]+[o]`: open and close file explorer 
 * `[a]`: add a new file when in the file explorer window 
+* `[ctrl]+[r]`: rename file that is currently selected 
 
 ### Telescope Fuzzy Finding
 
 * TODO 
+
+### Debugging
+
+* Check if an LSP is running: `:lua print(vim.inspect(vim.lsp.get_active_clients()))`
 
 [https://github.com/numToStr/Comment.nvim#configuration-optional](https://github.com/numToStr/Comment.nvim#configuration-optional)
 
