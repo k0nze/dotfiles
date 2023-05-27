@@ -51,7 +51,7 @@ return packer.startup(function(use)
     use("nvim-tree/nvim-tree.lua")
 
     -- icons
-    use("nvim-tree/nvim-web-devicons")
+    -- use("nvim-tree/nvim-web-devicons")
 
     -- status line
     use("nvim-lualine/lualine.nvim")
@@ -79,8 +79,15 @@ return packer.startup(function(use)
     use("hrsh7th/cmp-nvim-lsp")
     use("onsails/lspkind.nvim") -- add icons to auto completion
 
-    use("SmiteshP/nvim-navic")
-    use("utilyre/barbecue.nvim")
+    -- lspsaga
+    use({
+        "glepnir/lspsaga.nvim",
+        branch = "main",
+        requires = {
+            { "nvim-tree/nvim-web-devicons" },
+            { "nvim-treesitter/nvim-treesitter" },
+        },
+    })
 
     if packer_bootstrap then
         require("packer").sync()

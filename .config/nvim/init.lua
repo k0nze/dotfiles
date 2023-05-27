@@ -9,7 +9,7 @@ require("konze.plugins.telescope")
 require("konze.plugins.nvim-cmp")
 require("konze.plugins.lsp.mason")
 require("konze.plugins.lsp.lspconfig")
-require("konze.plugins.lsp.barbecue")
+require("konze.plugins.lsp.lspsaga")
 
 print("nvim ready!")
 
