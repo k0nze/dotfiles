@@ -68,7 +68,7 @@ yabai --start-service
 brew install koekeishiya/formulae/skhd
 brew install skhd
 skhd --start-service
-brew install tmux neovim ripgrep fd npm
+brew install tmux neovim tree ripgrep fd npm
 ```
 
 # Cheat Sheet
@@ -127,9 +127,18 @@ brew install tmux neovim ripgrep fd npm
 
 * TODO 
 
+### Save and Close
+
+* `[space]+[s]` save file
+* `[space]+[q]` close file
+
 ### Auto-completion
 
-### Code Navigation 
+### Code Navigation (lspsaga)
+
+* `[g]+[f]` show definitions and references
+* `[g]+[D]` go to declaration
+* `[g]+[i]` go to implementation
 
 ### Code Window / Minimap 
 
@@ -147,12 +156,6 @@ brew install tmux neovim ripgrep fd npm
 [https://github.com/numToStr/Comment.nvim#configuration-optional](https://github.com/numToStr/Comment.nvim#configuration-optional)
 
 
-
-### Save and Close
-
-* `[space]+[s]` save file
-* `[space]+[q]` close file
-
 ## tmux
 ### Splitting a Window
 
@@ -163,9 +166,10 @@ brew install tmux neovim ripgrep fd npm
 # TODOs
 ## neovim
 
+[ ] tabs [https://github.com/romgrk/barbar.nvim](https://github.com/romgrk/barbar.nvim)
 [ ] lspsaga keymap 
 [ ] python debugger (nvim-dap)
-[ ] ipython notebooks, setup magma [https://github.com/meatballs/magma-nvim](https://github.com/meatballs/magma-nvim)
+[ ] ipython notebooks, setup magma [https://github.com/dccsillag/magma-nvim](https://github.com/dccsillag/magma-nvim) (seems to be challenging to display images in the terminal)
 [ ] outline for popups 
 [ ] latex setup 
 [ ] rust setup [https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/](https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/)
