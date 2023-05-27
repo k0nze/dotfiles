@@ -127,11 +127,26 @@ brew install tmux neovim ripgrep fd npm
 
 * TODO 
 
-### Debugging
+### Auto-completion
+
+### Code Navigation 
+
+### Code Window / Minimap 
+
+* `[space]+[m]+[m]` toggle on/off
+* `[space]+[m]+[o]` enable
+* `[space]+[m]+[c]` disable (TODO change to `m+q`)
+* `[space]+[m]+[f]` focus / unfocus
+
+[https://github.com/gorbit99/codewindow.nvim#configuration]()https://github.com/gorbit99/codewindow.nvim#configuration
+
+### Debugging nvim config
 
 * Check if an LSP is running: `:lua print(vim.inspect(vim.lsp.get_active_clients()))`
 
 [https://github.com/numToStr/Comment.nvim#configuration-optional](https://github.com/numToStr/Comment.nvim#configuration-optional)
+
+
 
 ### Save and Close
 

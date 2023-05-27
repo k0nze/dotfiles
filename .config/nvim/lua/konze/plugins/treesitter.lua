@@ -25,6 +25,13 @@ treesitter.setup({
       "dockerfile",
       "gitignore",
       "python",
+      "rust",
+      "make",
+      "cpp",
+      "c",
+      "cmake",
+      "latex",
+      "bibtex",
     },
     -- auto install above language parsers
     auto_install = true,

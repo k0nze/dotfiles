@@ -89,6 +89,13 @@ return packer.startup(function(use)
         },
     })
 
+    -- minimap
+    use("gorbit99/codewindow.nvim")
+
+    -- restore last cursor postion
+    use("ethanholz/nvim-lastplace")
+
+
     if packer_bootstrap then
         require("packer").sync()
     end
