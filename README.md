@@ -164,4 +164,12 @@ brew install tmux neovim ripgrep fd npm
 ## neovim
 
 [ ] lspsaga keymap 
+[ ] python debugger (nvim-dap)
+[ ] ipython notebooks, setup magma [https://github.com/meatballs/magma-nvim](https://github.com/meatballs/magma-nvim)
+[ ] outline for popups 
+[ ] latex setup 
+[ ] rust setup [https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/](https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/)
+[ ] c setup 
+[ ] c++ setup 
+
 

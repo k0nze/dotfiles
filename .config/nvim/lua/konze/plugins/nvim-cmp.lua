@@ -45,6 +45,9 @@ cmp.setup({
             ellipsis_char = "...",
         }),
     },
+    window = {
+        --completion = cmp.config.window.bordered(), 
+    },
 })
 
 

@@ -14,6 +14,7 @@ require("konze.plugins.treesitter")
 require("konze.plugins.codewindow")
 require("konze.plugins.nvim-lastplace")
 require("konze.plugins.nvim-autopairs")
+require("konze.plugins.notebook")
 
 require("konze.core.autocommands")
 
