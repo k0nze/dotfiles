@@ -13,6 +13,7 @@ require("konze.plugins.lsp.lspsaga")
 require("konze.plugins.treesitter")
 require("konze.plugins.codewindow")
 require("konze.plugins.nvim-lastplace")
+require("konze.plugins.nvim-autopairs")
 
 require("konze.core.autocommands")
 

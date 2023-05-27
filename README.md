@@ -160,3 +160,8 @@ brew install tmux neovim ripgrep fd npm
 * `[ctrl]+[b]+["]` split window horizontally
 * `[ctrl]+[d]` close splitted window 
 
+# TODOs
+## neovim
+
+[ ] lspsaga keymap 
+

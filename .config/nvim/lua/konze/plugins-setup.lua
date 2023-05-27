@@ -95,6 +95,9 @@ return packer.startup(function(use)
     -- restore last cursor postion
     use("ethanholz/nvim-lastplace")
 
+    -- automatically close parenthesis etc.
+    use("windwp/nvim-autopairs")
+
 
     if packer_bootstrap then
         require("packer").sync()
