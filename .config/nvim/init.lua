@@ -10,6 +10,7 @@ require("konze.plugins.nvim-cmp")
 require("konze.plugins.lsp.mason")
 require("konze.plugins.lsp.lspconfig")
 require("konze.plugins.lsp.lspsaga")
+require("konze.plugins.treesitter")
 
 print("nvim ready!")
 
