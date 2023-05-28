@@ -149,6 +149,16 @@ brew install tmux neovim tree ripgrep fd npm
 
 [https://github.com/gorbit99/codewindow.nvim#configuration]()https://github.com/gorbit99/codewindow.nvim#configuration
 
+### Tabs (bufferline)
+
+* `[shift]+[h]` cycle to tab on the left 
+* `[shift]+[l]` cycle to tab on the right
+* `[shift]+[q]` close current tab 
+* `[shift]+[n]` open new buffer
+
+* `[ctrl]+[h]` move current tab to the left 
+* `[ctrl]+[l]` move current tab to the left 
+
 ### Debugging nvim config
 
 * Check if an LSP is running: `:lua print(vim.inspect(vim.lsp.get_active_clients()))`
@@ -166,7 +176,8 @@ brew install tmux neovim tree ripgrep fd npm
 # TODOs
 ## neovim
 
-[ ] tabs [https://github.com/romgrk/barbar.nvim](https://github.com/romgrk/barbar.nvim)
+[ ] persist
+[ ] telescope pick buffer 
 [ ] lspsaga keymap 
 [ ] python debugger (nvim-dap)
 [ ] ipython notebooks, setup magma [https://github.com/dccsillag/magma-nvim](https://github.com/dccsillag/magma-nvim) (seems to be challenging to display images in the terminal)

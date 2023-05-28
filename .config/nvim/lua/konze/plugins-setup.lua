@@ -98,10 +98,16 @@ return packer.startup(function(use)
     -- automatically close parenthesis etc.
     use("windwp/nvim-autopairs")
 
-    -- support for ipynb files
-    use("meatballs/notebook.nvim")
-    use("meatballs/magma-nvim")
+    -- support for ipynb files (not yet working)
+    --use("meatballs/notebook.nvim")
+    --use("meatballs/magma-nvim")
+    
+    -- tabs
+    use("akinsho/bufferline.nvim")
+    use("lewis6991/gitsigns.nvim")
+    use("moll/vim-bbye")
 
+    
     if packer_bootstrap then
         require("packer").sync()
     end

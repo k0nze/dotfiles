@@ -45,5 +45,7 @@ keymap.set("n", "tf", "<cmd>Telescope find_files<cr>") -- find files within curr
 keymap.set("n", "ts", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
 keymap.set("n", "tc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "tb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
-keymap.set("n", "th", "<cmd>Telescope help_tags<cr>") -- list available help tags
+-- keymap.set("n", "th", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
+-- set keymap to lua function
+--vim.keymap.set("n", "hh", function()  end)
