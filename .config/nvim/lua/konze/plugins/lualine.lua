@@ -19,7 +19,8 @@ lualine_solarized_dark.command = {
 
 lualine.setup({
     options = {
-        theme = lualine_solarized_dark
+        theme = lualine_solarized_dark,
+        disabled_filetypes = { "packer", "NvimTree" }
     }
 })
 
