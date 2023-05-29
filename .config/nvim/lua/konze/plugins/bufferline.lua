@@ -7,6 +7,8 @@ bufferline.setup({
     options = {
         mode = "buffers",
         close_command = "Bdelete! %d", 
+        -- separator_style = "slant",
+        -- separator_style customization: https://github.com/akinsho/bufferline.nvim/issues/555#issuecomment-1250093105
         offsets = {
             {
                 filetype = "NvimTree",
