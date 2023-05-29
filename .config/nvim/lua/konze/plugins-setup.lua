@@ -105,7 +105,10 @@ return packer.startup(function(use)
     -- tabs
     use("akinsho/bufferline.nvim")
     use("lewis6991/gitsigns.nvim")
-    use("moll/vim-bbye")
+    use("moll/vim-bbye") -- for closing tabs
+
+    -- persistance
+    use("olimorris/persisted.nvim")
 
     
     if packer_bootstrap then
