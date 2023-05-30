@@ -49,3 +49,7 @@ keymap.set("n", "tb", "<cmd>Telescope buffers<cr>") -- list open buffers in curr
 
 -- set keymap to lua function
 --vim.keymap.set("n", "hh", function()  end)
+
+-- save session, save all unsaved buffers, and close nvim
+keymap.set("n", "<C-S-q>", ":execute 'NvimTreeClose' | execute 'SessionSave' | wqa<CR>") 
+
