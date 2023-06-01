@@ -31,68 +31,37 @@ packer.startup(function(use)
     -- lua functions for other plugins
     use("nvim-lua/plenary.nvim")
 
-    -- auto completion
-    use("hrsh7th/nvim-cmp")
-    use("hrsh7th/cmp-buffer")
-    use("hrsh7th/cmp-path")
-
-    -- snippets
-    use("L3MON4D3/LuaSnip") -- snippet engine
-    use("saadparwaiz1/cmp_luasnip") -- for auto completion
-    use("rafamadriz/friendly-snippets") -- useful snippets
-
     -- managing and adding lsp servers
     use("williamboman/mason.nvim")
     use("williamboman/mason-lspconfig.nvim")
     use("neovim/nvim-lspconfig")
     use("hrsh7th/cmp-nvim-lsp")
 
+    -- lspsaga
+    use({
+        "glepnir/lspsaga.nvim",
+        branch = "main",
+        requires = {
+            { "nvim-tree/nvim-web-devicons" },
+            { "nvim-treesitter/nvim-treesitter" },
+        },
+    })
+
+    -- tabs
+    use("akinsho/bufferline.nvim")
+    use("lewis6991/gitsigns.nvim")
+    use("moll/vim-bbye") -- for closing tabs
+
+    -- persistance
+    use("olimorris/persisted.nvim")
 
     if install_plugins then
         packer.sync()
     end
 end)
 
-local cmp_status, cmp = pcall(require, "cmp")
-if not cmp_status then
-    return
-end
 
-local luasnip_status, luasnip = pcall(require, "luasnip")
-if not luasnip_status then
-    return
-end
-
-require("luasnip/loaders/from_vscode")
-
-
-vim.opt.completeopt = "menu,menuone,noselect"
-
-cmp.setup({
-    snippet = {
-        expand = function(args)
-            luasnip.lsp_expand(args.body)
-        end,
-    },
-    mapping = cmp.mapping.preset.insert({
-        ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-        ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
-        ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-        ["<C-f>"] = cmp.mapping.scroll_docs(4),
-        ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
-        ["<C-q>"] = cmp.mapping.abort(), -- close completion window
-        ["<CR>"] = cmp.mapping.confirm({ select = false }),
-    }),
-    sources = {
-        { name = "nvim_lsp" }, -- lsp 
-        { name = "luasnip" }, -- snippets
-        { name = "buffer" }, -- text within current buffer
-        { name = "path" }, -- file system paths
-    },
-})
-
-
--- mason
+-- mason setup
 local mason_status, mason = pcall(require, "mason")
 if not mason_status then
     return 
@@ -107,23 +76,12 @@ mason.setup()
 
 mason_lspconfig.setup({
     ensure_installed = {
-        --"asm_lsp",
-        --"bashls",
-        --"clangd",
-        --"cmake",
-        --"dockerls",
-        --"grammarly",
-        --"jsonls",
-        --"ltex",
-        --"lua_ls",
-        --"marksman",
-        "rust_analyzer",
         "pyright",
         "lua_ls",
     }
 })
 
--- 
+-- attach lsps
 local on_attach = function(client, bufnr)
      local opts = { noremap = true, silent = true }
 end
@@ -136,4 +94,53 @@ require("lspconfig")["pyright"].setup({
 	capabilities = capabilities,
 })
 
+-- nvim-treesitter setup
+local status, treesitter = pcall(require, "nvim-treesitter.configs")
+if not status then
+    return
+end
+
+treesitter.setup({
+    -- enable syntax highlighting
+    highlight = {
+        enable = true,
+    },
+    -- enable indentation
+    indent = { enable = true },
+    -- enable autotagging (w/ nvim-ts-autotag plugin)
+    autotag = { enable = true },
+    -- ensure these language parsers are installed
+    ensure_installed = {
+      "python",
+      "lua",
+      "vim",
+    },
+    -- auto install above language parsers
+    auto_install = true,
+})
+
+-- bufferline setup
+ local status, bufferline = pcall(require, "bufferline")
+if not status then
+    return
+end
+
+bufferline.setup({
+    options = {
+        mode = "buffers",
+        close_command = "Bdelete! %d", 
+    },
+})
+
+-- persisted setup
+local status, persisted = pcall(require, "persisted")
+if not status then
+    return
+end
+
+persisted.setup()
+
+
 print("Hello World")
+
+

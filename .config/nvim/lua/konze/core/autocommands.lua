@@ -17,8 +17,8 @@ function show_nvim_tree_and_restore_session_in_git_repository()
     if file_exists(".git") then
         vim.api.nvim_command("SessionLoad")
         vim.api.nvim_command("NvimTreeOpen")
-        key = vim.api.nvim_replace_termcodes('<C-w><right>', true, true, true)
-        vim.api.nvim_feedkeys(key, "n", 1)
+        --key = vim.api.nvim_replace_termcodes('<C-w><right>', true, true, true)
+        --vim.api.nvim_feedkeys(key, "n", 1)
         --print(vim.fn.expand("%"))
         --buf = vim.fn.expand("%")
         --vim.api.nvim_command("Bdelete! " .. buf)
@@ -30,4 +30,5 @@ vim.api.nvim_create_autocmd({"VimEnter"}, {
     pattern = {"*"}, 
     callback = function() show_nvim_tree_and_restore_session_in_git_repository() end,
 })
+
 

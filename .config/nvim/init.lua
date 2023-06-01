@@ -19,5 +19,6 @@ require("konze.plugins.persisted")
 
 require("konze.core.autocommands")
 
+
 -- print("nvim ready!")
 
