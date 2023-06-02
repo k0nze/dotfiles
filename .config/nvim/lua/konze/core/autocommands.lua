@@ -23,12 +23,12 @@ function show_nvim_tree_and_restore_session_in_git_repository()
         --buf = vim.fn.expand("%")
         --vim.api.nvim_command("Bdelete! " .. buf)
     end
-end 
+end
 
 -- when opening nvim inside a directory that contains a .git directory the nvim-tree is opened 
-vim.api.nvim_create_autocmd({"VimEnter"}, {
+--[[ vim.api.nvim_create_autocmd({"VimEnter"}, {
     pattern = {"*"}, 
     callback = function() show_nvim_tree_and_restore_session_in_git_repository() end,
 })
-
+ ]]
 

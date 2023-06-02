@@ -40,7 +40,7 @@ return packer.startup(function(use)
 
     -- vim tmux navigator
     --use("christoomey/vim-tmux-navigator")
-    
+
     -- maximize vim windows
     use("szw/vim-maximizer")
 
@@ -101,14 +101,17 @@ return packer.startup(function(use)
     -- support for ipynb files (not yet working)
     --use("meatballs/notebook.nvim")
     --use("meatballs/magma-nvim")
-    
+
     -- tabs
-    use("akinsho/bufferline.nvim")
+    use({"akinsho/bufferline.nvim", requires = "nvim-tree/nvim-web-devicons"})
     use("lewis6991/gitsigns.nvim")
     use("moll/vim-bbye") -- for closing tabs
 
     -- persistance
     use("olimorris/persisted.nvim")
+
+    -- trouble
+    use({"folke/trouble.nvim", requires = "nvim-tree/nvim-web-devicons"})
 
     
     if packer_bootstrap then

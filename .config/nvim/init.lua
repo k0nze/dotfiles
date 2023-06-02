@@ -16,9 +16,9 @@ require("konze.plugins.nvim-lastplace")
 require("konze.plugins.nvim-autopairs")
 require("konze.plugins.bufferline")
 require("konze.plugins.persisted")
+require("konze.plugins.trouble")
 
 require("konze.core.autocommands")
 
-
--- print("nvim ready!")
+print("nvim ready!")
 
