@@ -53,3 +53,5 @@ keymap.set("n", "tb", "<cmd>Telescope buffers<cr>") -- list open buffers in curr
 -- save session, save all unsaved buffers, and close nvim
 keymap.set("n", "<C-S-q>", ":execute 'NvimTreeClose' | execute 'SessionSave' | wqa<CR>") 
 
+-- turn off highlights
+keymap.set("n", "<C-n>", ":nohl<CR>")
