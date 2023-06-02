@@ -54,6 +54,7 @@ plugins=(
 git clone git@github.com:k0nze/dotfiles.git ${DOTFILES_REPO}
 cd $HOME
 mkdir -p .config
+ln -s ${DOTFILES_REPO}/.config/nvim ~/.config/nvim
 ln -s ${DOTFILES_REPO}/.config/yabai ~/.config/yabai
 ln -s ${DOTFILES_REPO}/.config/skhd ~/.config/skhd
 ln -s ${DOTFILES_REPO}/.tmux.conf ~/.tmux.conf
@@ -70,6 +71,30 @@ brew install skhd
 skhd --start-service
 brew install tmux neovim tree fzf ripgrep fd npm
 ```
+
+## Setup Ubuntu
+```
+git clone git@github.com:k0nze/dotfiles.git ${DOTFILES_REPO}
+cd $HOME
+mkdir -p .config
+ln -s ${DOTFILES_REPO}/.config/nvim ~/.config/nvim
+```
+
+```
+sudo apt update
+sudo apt install tree fzf tmux ripgrep npm
+sudo mkdir -p /opt/neovim/bin
+sudo wget https://github.com/neovim/neovim/releases/download/${LATEST_VERSION}/nvim.appimage -O /opt/neovim/nvim.appimage
+sudo chmod +x /opt/neovim/nvim.appimage 
+sudo ln -s /opt/neovim/nvim.appimage /opt/neovim/bin/nvim
+```
+
+Extend `$PATH` in `~/.zshrc`
+```
+# nvim
+export PATH="/opt/neovim/bin:${PATH}"
+```
+
 
 # Cheat Sheet
 ## shkd (macOS only)
