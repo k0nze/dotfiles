@@ -81,8 +81,9 @@ ln -s ${DOTFILES_REPO}/.config/nvim ~/.config/nvim
 ```
 
 ```
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt update
-sudo apt install tree fzf tmux ripgrep npm
+sudo apt install tree fzf tmux ripgrep nodejs
 sudo mkdir -p /opt/neovim/bin
 sudo wget https://github.com/neovim/neovim/releases/download/${LATEST_VERSION}/nvim.appimage -O /opt/neovim/nvim.appimage
 sudo chmod +x /opt/neovim/nvim.appimage 
@@ -91,9 +92,12 @@ sudo ln -s /opt/neovim/nvim.appimage /opt/neovim/bin/nvim
 
 Extend `$PATH` in `~/.zshrc`
 ```
-# nvim
 export PATH="/opt/neovim/bin:${PATH}"
 ```
+
+## Font
+
+CaskaydiaCoveNerdFont
 
 
 # Cheat Sheet
