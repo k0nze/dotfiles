@@ -182,8 +182,9 @@ CaskaydiaCoveNerdFont
 
 * `[shift]+[h]` cycle to tab on the left 
 * `[shift]+[l]` cycle to tab on the right
+* `[shift]+[p]` cycle to previous tab 
+* `[shift]+[n]` cycle to tab that was before previous 
 * `[shift]+[q]` close current tab 
-* `[shift]+[n]` open new buffer
 
 * `[ctrl]+[h]` move current tab to the left 
 * `[ctrl]+[l]` move current tab to the left 
