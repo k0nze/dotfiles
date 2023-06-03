@@ -39,3 +39,6 @@ opt.splitbelow = true
 -- - <- dash is considered as part of the word (e.g. for jumping over words using w)
 opt.iskeyword:append("-")
 
+-- ruler
+opt.colorcolumn = "88"
+
