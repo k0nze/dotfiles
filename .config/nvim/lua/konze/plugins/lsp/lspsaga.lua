@@ -25,4 +25,9 @@ saga.setup({
         respect_root = false,
         color_mode = true,
     },
+    finder = {
+        keys = {
+            expand_or_jump = "o"
+        }
+    }
 })

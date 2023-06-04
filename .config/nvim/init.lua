@@ -18,6 +18,7 @@ require("konze.plugins.nvim-autopairs")
 require("konze.plugins.bufferline")
 require("konze.plugins.persisted")
 require("konze.plugins.trouble")
+require("konze.plugins.gitsigns")
 
 require("konze.core.autocommands")
 

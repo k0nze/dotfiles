@@ -166,8 +166,14 @@ CaskaydiaCoveNerdFont
 ### Code Navigation (lspsaga)
 
 * `[g]+[f]` show definitions and references
-* `[g]+[D]` go to declaration
+* `[g]+[d]` go to declaration
+* `[g]+[r]` show refernces
 * `[g]+[i]` go to implementation
+
+Finder navigation:
+* `[j]` down
+* `[k]` up
+* `[o]` open
 
 ### Code Window / Minimap 
 

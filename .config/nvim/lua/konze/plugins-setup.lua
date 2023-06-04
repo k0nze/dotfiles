@@ -107,7 +107,6 @@ return packer.startup(function(use)
 
     -- tabs
     use({"akinsho/bufferline.nvim", requires = "nvim-tree/nvim-web-devicons"})
-    use("lewis6991/gitsigns.nvim")
     use("moll/vim-bbye") -- for closing tabs
 
     -- persistance
@@ -116,7 +115,12 @@ return packer.startup(function(use)
     -- trouble
     use({"folke/trouble.nvim", requires = "nvim-tree/nvim-web-devicons"})
 
-    
+    -- indent blank lines
+    use("lukas-reineke/indent-blankline.nvim")
+
+    -- git signs
+    use("lewis6991/gitsigns.nvim")
+
     if packer_bootstrap then
         require("packer").sync()
     end
