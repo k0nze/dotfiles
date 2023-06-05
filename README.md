@@ -95,6 +95,22 @@ Extend `$PATH` in `~/.zshrc`
 export PATH="/opt/neovim/bin:${PATH}"
 ```
 
+## Setup Common
+
+Install TPM (Tmux Plugin Manager)
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+TODO: create custom theme and put it into git repo
+
+Add to `~/.zshrc`
+```
+export TMUX_POWERLINE_THEME="k0nze"
+```
+
+Open `tmux` and press `[ctrl]+[b]+[I]` to install TPM plugins
+
 ## Font
 
 CaskaydiaCoveNerdFont
