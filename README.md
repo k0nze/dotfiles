@@ -97,6 +97,7 @@ export PATH="/opt/neovim/bin:${PATH}"
 
 ## Setup Common
 
+### Tmux
 Install TPM (Tmux Plugin Manager)
 ```
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -111,9 +112,15 @@ export TMUX_POWERLINE_THEME="k0nze"
 
 Open `tmux` and press `[ctrl]+[b]+[I]` to install TPM plugins
 
-## Font
+### Git
+```
+git config --global core.editor "nvim"
+```
 
-CaskaydiaCoveNerdFont
+## Fonts
+
+CaskaydiaCoveNerdFont (for Windows Terminal)
+MesloLG NF (for iTerm2)
 
 
 # Cheat Sheet
