@@ -32,3 +32,8 @@ end
 })
  ]]
 
+vim.api.nvim_create_autocmd({"BufRead,BufNewFile"}, {
+    pattern = {"*.txt,*.md,*.txt"},
+    callback = function() vim.api.nvim_command("set wrap") end,
+})
+

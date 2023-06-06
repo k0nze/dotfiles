@@ -12,7 +12,6 @@ opt.autoindent = true
 
 -- line wrapping
 opt.wrap = false
--- TODO set to true for .tex, .txt, and .md
 
 -- search settings
 opt.ignorecase = true
