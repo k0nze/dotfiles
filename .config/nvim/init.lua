@@ -19,6 +19,7 @@ require("konze.plugins.bufferline")
 require("konze.plugins.persisted")
 require("konze.plugins.trouble")
 require("konze.plugins.gitsigns")
+require("konze.plugins.toggleterm")
 
 require("konze.core.autocommands")
 
