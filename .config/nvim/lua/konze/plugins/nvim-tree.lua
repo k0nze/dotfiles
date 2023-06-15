@@ -20,7 +20,7 @@ nvimtree.setup({
     },
     filters = {
         custom = { ".git", "__pycache__" },
-        exclude = { ".gitignore" }
+        exclude = { ".gitignore", ".venv", ".github" }
     }
 })
 
