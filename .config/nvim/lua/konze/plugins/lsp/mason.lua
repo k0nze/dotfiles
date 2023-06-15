@@ -14,8 +14,6 @@ mason_lspconfig.setup({
     ensure_installed = {
         --"asm_lsp",
         --"bashls",
-        --"clangd",
-        --"cmake",
         --"dockerls",
         --"grammarly",
         --"jsonls",
@@ -24,6 +22,8 @@ mason_lspconfig.setup({
         "rust_analyzer",
         "pyright",
         "lua_ls",
+        "cmake",
+        "clangd",
     }
 })
 
