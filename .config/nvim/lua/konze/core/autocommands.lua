@@ -32,8 +32,14 @@ end
 })
  ]]
 
+-- automatically wrap files if they a *.tex, *.md, *.tex
 vim.api.nvim_create_autocmd({"BufRead,BufNewFile"}, {
-    pattern = {"*.txt,*.md,*.txt"},
+    pattern = {"*.txt,*.md,*.tex"},
     callback = function() vim.api.nvim_command("set wrap") end,
 })
 
+vim.o.autoread = true
+vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+    command = "if mode() != 'c' | checktime | endif",
+    pattern = { "*" },
+})
