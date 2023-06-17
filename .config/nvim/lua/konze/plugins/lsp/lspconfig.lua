@@ -9,7 +9,7 @@ local on_attach = function(client, bufnr)
     keymap.set("n", "ga", "<cmd>Lspsaga code_action<CR>", opts) -- code action
     -- keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
     keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
-    keymap.set("n", "gR", "<cmd>Lspsaga rename ++project<CR>", opts) -- rename in entire project
+    keymap.set("n", "gR", "<cmd>Lspsaga rename<CR>", opts) -- rename in entire project
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
