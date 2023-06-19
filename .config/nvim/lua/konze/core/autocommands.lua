@@ -35,7 +35,7 @@ end
 -- automatically wrap files if they a *.tex, *.md, *.tex
 vim.api.nvim_create_autocmd({"BufRead,BufNewFile"}, {
     pattern = {"*.txt,*.md,*.tex"},
-    callback = function() vim.api.nvim_command("set wrap") end,
+    callback = function() vim.api.nvim_command("set wrap linebreak nolist") end,
 })
 
 vim.o.autoread = true
