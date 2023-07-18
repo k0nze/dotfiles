@@ -14,22 +14,32 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
-require("lspconfig")["pyright"].setup({
+local lspconfig = require("lspconfig")
+
+local python_root_files = {
+    'pyproject.toml',
+    'setup.py',
+    'requirements.txt',
+    'pyrightconfig.json',
+}
+
+lspconfig["pyright"].setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+    root_dir = lspconfig.util.root_pattern(unpack(python_root_files))
+})
+
+lspconfig["clangd"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
 
-require("lspconfig")["clangd"].setup({
+lspconfig["cmake"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
 
-require("lspconfig")["cmake"].setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
-require("lspconfig")["lua_ls"].setup({
+lspconfig["lua_ls"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
