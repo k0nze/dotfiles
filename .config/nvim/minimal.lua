@@ -31,21 +31,23 @@ packer.startup(function(use)
     -- lua functions for other plugins
     use("nvim-lua/plenary.nvim")
 
-    -- managing and adding lsp servers
-    use("williamboman/mason.nvim")
-    use("williamboman/mason-lspconfig.nvim")
-    use("neovim/nvim-lspconfig")
-    use("hrsh7th/cmp-nvim-lsp")
+    -- -- managing and adding lsp servers
+    -- use("williamboman/mason.nvim")
+    -- use("williamboman/mason-lspconfig.nvim")
+    -- use("neovim/nvim-lspconfig")
+    -- use("hrsh7th/cmp-nvim-lsp")
+    --
+    -- -- lspsaga
+    -- use({
+    --     "glepnir/lspsaga.nvim",
+    --     branch = "main",
+    --     requires = {
+    --         { "nvim-tree/nvim-web-devicons" },
+    --         { "nvim-treesitter/nvim-treesitter" },
+    --     },
+    -- })
 
-    -- lspsaga
-    use({
-        "glepnir/lspsaga.nvim",
-        branch = "main",
-        requires = {
-            { "nvim-tree/nvim-web-devicons" },
-            { "nvim-treesitter/nvim-treesitter" },
-        },
-    })
+    use {'neoclide/coc.nvim', branch = 'release'}
 
     -- tabs
     use("akinsho/bufferline.nvim")
