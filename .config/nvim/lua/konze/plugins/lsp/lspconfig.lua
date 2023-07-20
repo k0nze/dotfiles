@@ -44,3 +44,17 @@ lspconfig["lua_ls"].setup({
 	capabilities = capabilities,
 })
 
+lspconfig["ltex"].setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+    filetypes = { "latex", "tex", "bib", "markdown", "gitcommit", "text" },
+        settings = {
+            ltex = {
+                enabled = { "latex", "tex", "bib", "markdown", },
+                language = "en-US",
+                diagnosticSeverity = "information",
+                sentenceCacheSize = 2000,
+            },
+        },
+})
+

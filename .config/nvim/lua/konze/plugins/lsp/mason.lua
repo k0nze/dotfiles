@@ -17,13 +17,13 @@ mason_lspconfig.setup({
         --"dockerls",
         --"grammarly",
         --"jsonls",
-        --"ltex",
         "marksman",
         "rust_analyzer",
         "pyright",
         "lua_ls",
         "cmake",
         "clangd",
+        "ltex",
     }
 })
 

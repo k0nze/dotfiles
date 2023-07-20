@@ -124,7 +124,6 @@ return packer.startup(function(use)
     -- toggle term
     use("akinsho/toggleterm.nvim")
 
-
     if packer_bootstrap then
         require("packer").sync()
     end
