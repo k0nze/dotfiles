@@ -124,6 +124,12 @@ return packer.startup(function(use)
     -- toggle term
     use("akinsho/toggleterm.nvim")
 
+    -- nvim-dap (debugger adapter protocol)
+    use("mfussenegger/nvim-dap")
+    use("mfussenegger/nvim-dap-python")
+    use("theHamsta/nvim-dap-virtual-text")
+    use{"rcarriga/nvim-dap-ui"}
+
     if packer_bootstrap then
         require("packer").sync()
     end

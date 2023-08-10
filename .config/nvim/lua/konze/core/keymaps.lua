@@ -55,3 +55,7 @@ keymap.set("n", "<C-S-q>", ":execute 'NvimTreeClose' | execute 'SessionSave' | w
 
 -- turn off highlights
 keymap.set("n", "<C-n>", ":nohl<CR>")
+
+-- nvim-dap debugging
+keymap.set("n", "<leader>d", ":lua require('dapui').toggle()<cr>")
+

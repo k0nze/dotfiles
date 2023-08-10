@@ -20,6 +20,9 @@ require("konze.plugins.persisted")
 require("konze.plugins.trouble")
 require("konze.plugins.gitsigns")
 require("konze.plugins.toggleterm")
+require("konze.plugins.nvim-dap-virtual-text")
+require("konze.plugins.nvim-dap-ui")
+require("konze.plugins.nvim-dap-python")
 
 require("konze.core.autocommands")
 

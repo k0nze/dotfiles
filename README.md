@@ -97,6 +97,14 @@ export PATH="/opt/neovim/bin:${PATH}"
 
 ## Setup Common
 
+### dubugpy
+
+```
+cd ~/.config
+python -m venv debugpy
+debugpy/bin/python -m pip install debugpy
+```
+
 ### Tmux
 Install TPM (Tmux Plugin Manager)
 ```
