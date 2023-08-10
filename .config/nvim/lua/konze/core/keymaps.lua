@@ -58,4 +58,10 @@ keymap.set("n", "<C-n>", ":nohl<CR>")
 
 -- nvim-dap debugging
 keymap.set("n", "<leader>d", ":lua require('dapui').toggle()<cr>")
+keymap.set("n", "db", ":lua require('dap').toggle_breakpoint()<cr>")
+keymap.set("n", "dc", ":lua require('dap').continue()<cr>")
+keymap.set("n", "dl", ":lua require('dap').run_last()<cr>")
+keymap.set("n", "do", ":lua require('dap').step_over()<cr>")
+keymap.set("n", "di", ":lua require('dap').step_into()<cr>")
+keymap.set("n", "dq", ":lua require('dap').disconnect({ terminateDebuggee = true })<cr>")
 
