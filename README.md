@@ -236,9 +236,15 @@ Finder navigation:
 ## tmux
 ### Splitting a Window
 
-* `[ctrl]+[b]+[%]` split window vertically
-* `[ctrl]+[b]+["]` split window horizontally
+* `[ctrl]+[x]+[%]` split window vertically
+* `[ctrl]+[x]+["]` split window horizontally
 * `[ctrl]+[d]` close splitted window 
+* `[ctrl]+[x]+[:]` enter tmux command mode 
+* `[ctrl]+[x]+[[]` enter copy mode 
+    * use `hjlk` to navigate in copy mode 
+    * use `[space]` to start copy
+    * use `[y]` to copy to system clip board 
+    * use `[enter]` to leave copy mode 
 
 # TODOs
 ## neovim
