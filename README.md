@@ -69,7 +69,7 @@ yabai --start-service
 brew install koekeishiya/formulae/skhd
 brew install skhd
 skhd --start-service
-brew install tmux neovim tree fzf ripgrep fd npm
+brew install tmux neovim tree fzf ripgrep fd npm jq
 ```
 
 ## Setup Ubuntu
