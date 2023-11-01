@@ -125,6 +125,21 @@ Open `tmux` and press `[ctrl]+[b]+[I]` to install TPM plugins
 git config --global core.editor "nvim"
 ```
 
+### Vimium
+
+Custom key mappings:
+```
+unmap H
+unmap L
+map H previousTab
+map L nextTab
+unmap J
+unmap K
+map J goForward
+map K goBack
+map Q removeTab
+```
+
 ## Fonts
 
 CaskaydiaCoveNerdFont (for Windows Terminal)
