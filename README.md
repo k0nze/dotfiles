@@ -246,12 +246,20 @@ Finder navigation:
 * `[ctrl]+[x]+[%]` split window vertically
 * `[ctrl]+[x]+["]` split window horizontally
 * `[ctrl]+[d]` close splitted window 
+
+### Command Mode
 * `[ctrl]+[x]+[:]` enter tmux command mode 
+
+### Copy and Paste
 * `[ctrl]+[x]+[[]` enter copy mode 
     * use `hjlk` to navigate in copy mode 
     * use `[space]` to start copy
     * use `[y]` to copy to system clip board 
     * use `[enter]` to leave copy mode 
+* `[ctrl]+[x]+[v]` paste
+
+In the iterm2 preferences set "General > Selection > [x] Applications in Terminal may access clipboard"
+
 
 # TODOs
 ## neovim
