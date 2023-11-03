@@ -127,8 +127,8 @@ map H previousTab
 map L nextTab
 unmap J
 unmap K
-map J goForward
-map K goBack
+map J goBack
+map K goForward
 map Q removeTab
 ```
 
