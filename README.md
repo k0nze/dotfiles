@@ -239,6 +239,14 @@ Finder navigation:
 
 [https://github.com/numToStr/Comment.nvim#configuration-optional](https://github.com/numToStr/Comment.nvim#configuration-optional)
 
+### Updating
+
+When neovim gets updated run the following commands in neovim and make sure to set GCC as default compiler:
+
+```
+:PackerSync
+:TSUpdate
+```
 
 ## tmux
 ### Splitting a Window
@@ -246,6 +254,13 @@ Finder navigation:
 * `[ctrl]+[x]+[%]` split window vertically
 * `[ctrl]+[x]+["]` split window horizontally
 * `[ctrl]+[d]` close splitted window 
+
+### Change Split Size
+
+* `[ctrl]+[x]+[→]` increase pane size to the right
+* `[ctrl]+[x]+[←]` increase pane size to the left
+* `[ctrl]+[x]+[↑]` increase pane size up
+* `[ctrl]+[x]+[↓]` increase pane size up
 
 ### Command Mode
 * `[ctrl]+[x]+[:]` enter tmux command mode 
