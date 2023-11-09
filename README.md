@@ -57,7 +57,7 @@ mkdir -p .config
 ln -s ${DOTFILES_REPO}/.config/nvim ~/.config/nvim
 ln -s ${DOTFILES_REPO}/.tmux.conf ~/.tmux.conf
 mkdir -p .config/karabiner
-ln -s ${DOTFILES_REPO}/.config/karabiner ~/.config/karabiner/karabiner.json
+ln -s ${DOTFILES_REPO}/.config/karabiner ~/.config/karabiner
 ```
 
 ```
