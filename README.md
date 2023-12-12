@@ -233,6 +233,14 @@ Finder navigation:
 * `[ctrl]+[h]` move current tab to the left 
 * `[ctrl]+[l]` move current tab to the left 
 
+### LanguageTool Premium
+
+```
+cp .config/nvim/lua/konze/language-tool-credentials.lua.template .config/nvim/lua/konze/language-tool-credentials.lua
+```
+
+Change `LanguageTool_username` and `LanguageTool_apiKey`.
+
 ### Debugging nvim config
 
 * Check if an LSP is running: `:lua print(vim.inspect(vim.lsp.get_active_clients()))`
