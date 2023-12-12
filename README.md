@@ -136,6 +136,7 @@ map Q removeTab
 
 CaskaydiaCoveNerdFont (for Windows Terminal)
 MesloLG NF (for iTerm2)
+Fix colors for zsh-autosuggestions: [https://github.com/zsh-users/zsh-autosuggestions/issues/416#issuecomment-486516333](https://github.com/zsh-users/zsh-autosuggestions/issues/416#issuecomment-486516333)
 
 
 # Cheat Sheet
