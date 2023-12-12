@@ -1,3 +1,5 @@
+require("konze.language-tool-credentials")
+
 local keymap = vim.keymap -- for conciseness
 
 local on_attach = function(client, bufnr)
@@ -54,6 +56,11 @@ lspconfig["ltex"].setup({
                 language = "en-US",
                 diagnosticSeverity = "information",
                 sentenceCacheSize = 2000,
+                languageToolHttpServerUri = "https://api.languagetoolplus.com/v2",
+                languageToolOrg = {
+                    username = LanguageTool_username,  
+                    apiKey = LanguageTool_ApiKey,
+                },
             },
         },
 })
