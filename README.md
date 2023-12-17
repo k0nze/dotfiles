@@ -256,6 +256,7 @@ When neovim gets updated run the following commands in neovim and make sure to s
 :PackerSync
 :TSUpdate
 :MasonUpdate
+:Copilot auth
 ```
 
 ## tmux

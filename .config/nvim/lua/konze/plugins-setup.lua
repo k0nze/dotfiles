@@ -128,7 +128,11 @@ return packer.startup(function(use)
     use("mfussenegger/nvim-dap")
     use("mfussenegger/nvim-dap-python")
     use("theHamsta/nvim-dap-virtual-text")
-    use{"rcarriga/nvim-dap-ui"}
+    use("rcarriga/nvim-dap-ui")
+
+    -- copilot
+    use("zbirenbaum/copilot.lua")
+    use("zbirenbaum/copilot-cmp")
 
     if packer_bootstrap then
         require("packer").sync()

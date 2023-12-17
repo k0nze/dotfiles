@@ -24,6 +24,8 @@ require("konze.plugins.nvim-dap")
 require("konze.plugins.nvim-dap-virtual-text")
 require("konze.plugins.nvim-dap-ui")
 require("konze.plugins.nvim-dap-python")
+require("konze.plugins.copilot")
+require("konze.plugins.copilot-cmp")
 
 require("konze.core.autocommands")
 
