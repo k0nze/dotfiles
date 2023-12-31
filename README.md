@@ -91,6 +91,11 @@ export PATH="/opt/neovim/bin:${PATH}"
 
 ### dubugpy
 
+Set config directory with adding the following to your `~/.zshrc`
+```
+export XDG_CONFIG_HOME="~/.config"
+```
+
 ```
 cd ~/.config
 python -m venv debugpy
@@ -100,7 +105,7 @@ debugpy/bin/python -m pip install debugpy
 ### Tmux
 Install TPM (Tmux Plugin Manager)
 ```
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 ```
 
 TODO: create custom theme and put it into git repo
