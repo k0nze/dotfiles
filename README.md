@@ -11,7 +11,7 @@ install powerlevel10k:
 ```
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
-change theme in `.zshrc`:
+change theme in `~/.zshrc`:
 ```
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
@@ -55,9 +55,10 @@ git clone git@github.com:k0nze/dotfiles.git ${DOTFILES_REPO}
 cd $HOME
 mkdir -p .config
 ln -s ${DOTFILES_REPO}/.config/nvim ~/.config/nvim
-ln -s ${DOTFILES_REPO}/.tmux.conf ~/.tmux.conf
 mkdir -p .config/karabiner
 ln -s ${DOTFILES_REPO}/.config/karabiner ~/.config/karabiner
+ln -s ${DOTFILES_REPO}/.config/tmux ~/.config/tmux
+ln -s ${DOTFILES_REPO}/.config/tmux-powerline ~/.config/tmux-powerline
 ```
 
 ```
@@ -70,6 +71,8 @@ git clone git@github.com:k0nze/dotfiles.git ${DOTFILES_REPO}
 cd $HOME
 mkdir -p .config
 ln -s ${DOTFILES_REPO}/.config/nvim ~/.config/nvim
+ln -s ${DOTFILES_REPO}/.config/tmux ~/.config/tmux
+ln -s ${DOTFILES_REPO}/.config/tmux-powerline ~/.config/tmux-powerline
 ```
 
 ```
@@ -89,12 +92,12 @@ export PATH="/opt/neovim/bin:${PATH}"
 
 ## Setup Common
 
-### dubugpy
-
 Set config directory with adding the following to your `~/.zshrc`
 ```
 export XDG_CONFIG_HOME="~/.config"
 ```
+
+### dubugpy
 
 ```
 cd ~/.config
@@ -103,19 +106,13 @@ debugpy/bin/python -m pip install debugpy
 ```
 
 ### Tmux
+
 Install TPM (Tmux Plugin Manager)
 ```
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 ```
 
-TODO: create custom theme and put it into git repo
-
-Add to `~/.zshrc`
-```
-export TMUX_POWERLINE_THEME="k0nze"
-```
-
-Open `tmux` and press `[ctrl]+[b]+[I]` to install TPM plugins
+Open `tmux` and press `[ctrl]+[x]+[I]` to install TPM plugins
 
 ### Git
 ```
