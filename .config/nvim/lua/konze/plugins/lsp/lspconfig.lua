@@ -18,6 +18,8 @@ capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 local lspconfig = require("lspconfig")
 
+local cmp_nvim_lsp = require("cmp_nvim_lsp")
+
 local python_root_files = {
     'pyproject.toml',
     'setup.py',
@@ -33,7 +35,11 @@ lspconfig["pyright"].setup({
 
 lspconfig["clangd"].setup({
 	on_attach = on_attach,
-	capabilities = capabilities,
+	capabilities = cmp_nvim_lsp.default_capabilities(),
+    --cmd = {
+    --    "clangd",
+    --    "--offset-encoding=UTF-16"
+    --},
 })
 
 lspconfig["cmake"].setup({
