@@ -1,5 +1,12 @@
 # Konze's dotfiles
 
+## Setup Common
+
+Set config directory with adding the following to your `~/.zshrc`
+```
+export XDG_CONFIG_HOME="~/.config"
+```
+
 ## zsh setup
 
 install OhMyZsh:
@@ -52,13 +59,11 @@ plugins=(
 
 ```
 git clone git@github.com:k0nze/dotfiles.git ${DOTFILES_REPO}
-cd $HOME
-mkdir -p .config
-ln -s ${DOTFILES_REPO}/.config/nvim ~/.config/nvim
-mkdir -p .config/karabiner
-ln -s ${DOTFILES_REPO}/.config/karabiner ~/.config/karabiner
-ln -s ${DOTFILES_REPO}/.config/tmux ~/.config/tmux
-ln -s ${DOTFILES_REPO}/.config/tmux-powerline ~/.config/tmux-powerline
+mkdir -p ${XDG_CONFIG_HOME}
+ln -s ${DOTFILES_REPO}/.config/karabiner ${XDG_CONFIG_HOME}/karabiner
+ln -s ${DOTFILES_REPO}/.config/nvim ${XDG_CONFIG_HOME}/nvim
+ln -s ${DOTFILES_REPO}/.config/tmux ${XDG_CONFIG_HOME}/tmux
+ln -s ${DOTFILES_REPO}/.config/tmux-powerline ${XDG_CONFIG_HOME}/tmux-powerline
 ```
 
 ```
@@ -68,11 +73,11 @@ brew install tmux neovim tree fzf ripgrep fd npm jq
 ## Setup Ubuntu
 ```
 git clone git@github.com:k0nze/dotfiles.git ${DOTFILES_REPO}
-cd $HOME
-mkdir -p .config
-ln -s ${DOTFILES_REPO}/.config/nvim ~/.config/nvim
-ln -s ${DOTFILES_REPO}/.config/tmux ~/.config/tmux
-ln -s ${DOTFILES_REPO}/.config/tmux-powerline ~/.config/tmux-powerline
+mkdir -p ${XDG_CONFIG_HOME}
+ln -s ${DOTFILES_REPO}/.config/nvim ${XDG_CONFIG_HOME}/nvim
+ln -s ${DOTFILES_REPO}/.config/tmux ${XDG_CONFIG_HOME}/tmux
+ln -s ${DOTFILES_REPO}/.config/tmux-powerline ${XDG_CONFIG_HOME}/tmux-powerline
+
 ```
 
 ```
@@ -90,12 +95,7 @@ Extend `$PATH` in `~/.zshrc`
 export PATH="/opt/neovim/bin:${PATH}"
 ```
 
-## Setup Common
 
-Set config directory with adding the following to your `~/.zshrc`
-```
-export XDG_CONFIG_HOME="~/.config"
-```
 
 ### dubugpy
 
