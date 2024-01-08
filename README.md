@@ -4,7 +4,7 @@
 
 Set config directory with adding the following to your `~/.zshrc`
 ```
-export XDG_CONFIG_HOME="~/.config"
+export XDG_CONFIG_HOME="$HOME/.config"
 ```
 
 ## zsh setup
@@ -77,25 +77,34 @@ mkdir -p ${XDG_CONFIG_HOME}
 ln -s ${DOTFILES_REPO}/.config/nvim ${XDG_CONFIG_HOME}/nvim
 ln -s ${DOTFILES_REPO}/.config/tmux ${XDG_CONFIG_HOME}/tmux
 ln -s ${DOTFILES_REPO}/.config/tmux-powerline ${XDG_CONFIG_HOME}/tmux-powerline
-
 ```
 
 ```
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt update
-sudo apt install tree fzf tmux ripgrep nodejs
+sudo apt install tree fzf ripgrep libevent-dev
 sudo mkdir -p /opt/neovim/bin
 sudo wget https://github.com/neovim/neovim/releases/download/${LATEST_VERSION}/nvim.appimage -O /opt/neovim/nvim.appimage
 sudo chmod +x /opt/neovim/nvim.appimage 
 sudo ln -s /opt/neovim/nvim.appimage /opt/neovim/bin/nvim
 ```
 
+Install `tmux` from scratch
+```
+git clone https://github.com/tmux/tmux.git
+cd tmux
+git checkout 3.3
+sh autogen.sh
+./configure --prefix=/opt/tmux/tmux-3.3
+make
+make install
+```
+
 Extend `$PATH` in `~/.zshrc`
 ```
 export PATH="/opt/neovim/bin:${PATH}"
+export PATH="/opt/tmux/tmux-3.3/bin:${PATH}"
 ```
-
-
 
 ### dubugpy
 
@@ -132,6 +141,15 @@ unmap K
 map J goBack
 map K goForward
 map Q removeTab
+```
+
+### Node.js for Copilot
+
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+source ~/.zshrc
+nvm list-remote
+nvm install v21.5.0
 ```
 
 ## Fonts
