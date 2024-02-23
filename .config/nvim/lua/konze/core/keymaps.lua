@@ -17,6 +17,11 @@ keymap.set("n", "<leader>=", "<C-w>=")
 -- close current split window
 keymap.set("n", "<C-d>", ":close<CR>")
 
+-- leave insert mode with RAlt+c
+keymap.set("i", "ç", "<C-c>")
+-- close current split window with RAlt+d
+keymap.set("n", "∂", ":close<CR>")
+
 -- move to window above
 keymap.set("n", "<leader>k", "<C-w><up>")
 -- move to window below
