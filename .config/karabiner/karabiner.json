@@ -192,30 +192,45 @@
                                     }
                                 ],
                                 "type": "basic"
-                            } 
-                        ]
-                    },
-{
-                    "manipulators": [
+                            },
                             {
-                                "description": "test",
+                                "conditions": [
+                                    {
+                                        "name": "vi_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "vi_visual_mode",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
                                 "from": {
-                                    "key_code": "u",
+                                    "key_code": "close_bracket",
                                     "modifiers": {
-                                        "mandatory": ["caps_lock", "left_shift"]
+                                        "mandatory": [
+                                            "left_shift"
+                                        ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "g",
-                                        "modifiers": ["left_shift"]
+                                        "key_code": "6",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "vk_none"
                                     }
                                 ],
                                 "type": "basic"
-                            }
+                            } 
                         ]
                     },
-
 
                     {
                         "manipulators": [
