@@ -51,7 +51,7 @@ return packer.startup(function(use)
     use("nvim-tree/nvim-tree.lua")
 
     -- icons
-    -- use("nvim-tree/nvim-web-devicons")
+    use("nvim-tree/nvim-web-devicons")
 
     -- status line
     use("nvim-lualine/lualine.nvim")
@@ -81,7 +81,8 @@ return packer.startup(function(use)
 
     -- lspsaga
     use({
-        "glepnir/lspsaga.nvim",
+        --"glepnir/lspsaga.nvim",
+        "nvimdev/lspsaga.nvim",
         branch = "main",
         requires = {
             { "nvim-tree/nvim-web-devicons" },
