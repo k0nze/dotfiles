@@ -29,7 +29,7 @@ Prompt Style: (3) Rainbow
 Character Set: (1) Unicode
 Show current time: (2) 24-hour-format
 Prompt separators: (3) Slanted
-Prompt Heads: (1) Sharp
+Prompt Heads: (3) Sharp
 Prompt Tails: (1) Flat
 Prompt Height: (2) Two lines
 Prompt Connection: (2) Dotted
@@ -82,7 +82,7 @@ ln -s ${DOTFILES_REPO}/.config/tmux-powerline ${XDG_CONFIG_HOME}/tmux-powerline
 ```
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt update
-sudo apt install tree fzf ripgrep libevent-dev
+sudo apt install tree fzf ripgrep libevent-dev build-essential automake libncurses5-dev bison flex
 sudo mkdir -p /opt/neovim/bin
 sudo wget https://github.com/neovim/neovim/releases/download/${LATEST_VERSION}/nvim.appimage -O /opt/neovim/nvim.appimage
 sudo chmod +x /opt/neovim/nvim.appimage 
@@ -97,7 +97,7 @@ git checkout 3.3
 sh autogen.sh
 ./configure --prefix=/opt/tmux/tmux-3.3
 make
-make install
+sudo make install
 ```
 
 Extend `$PATH` in `~/.zshrc`
