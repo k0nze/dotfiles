@@ -29,5 +29,14 @@ saga.setup({
         keys = {
             expand_or_jump = "o"
         }
+    },
+    outline = {
+        win_width = 40,
+        close_after_jump = true,
+        keys = {
+            toggle_or_jump = "o",
+            quit = "<esc>",
+            jump = "<CR>",
+        }
     }
 })
