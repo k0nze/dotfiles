@@ -220,6 +220,12 @@ Fix colors for zsh-autosuggestions: [https://github.com/zsh-users/zsh-autosugges
 * `[space]+[s]` save file
 * `[space]+[q]` close file
 
+### git mergetool
+
+* Setup: [https://smittie.de/posts/git-mergetool/](https://smittie.de/posts/git-mergetool/)
+* Usage: [https://www.rosipov.com/blog/use-vimdiff-as-git-mergetool/](https://www.rosipov.com/blog/use-vimdiff-as-git-mergetool/)
+
+
 ### Auto-completion
 
 ### Code Navigation (lspsaga)

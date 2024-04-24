@@ -135,6 +135,9 @@ return packer.startup(function(use)
     use("zbirenbaum/copilot.lua")
     use("zbirenbaum/copilot-cmp")
 
+    -- diffview
+    use("sindrets/diffview.nvim")
+
     if packer_bootstrap then
         require("packer").sync()
     end
