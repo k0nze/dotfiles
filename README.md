@@ -313,6 +313,11 @@ When neovim gets updated run the following commands in neovim and make sure to s
 In the iterm2 preferences set "General > Selection > [x] Applications in Terminal may access clipboard"
 
 
+# Useful Links
+
+* [Vim un/indent lines](https://learnbyexample.github.io/tips/vim-tip-2/)
+* [Vim increase/decrease numbers](https://learnbyexample.github.io/tips/vim-tip-1/)
+
 # TODOs
 ## neovim
 
