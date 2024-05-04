@@ -181,6 +181,13 @@ Fix colors for zsh-autosuggestions: [https://github.com/zsh-users/zsh-autosugges
 * `[shift]+[left ctrl]+[l]` increase window to the right
 
 ## neovim
+
+### basic
+* `[ctrl]+[a]` increase number under cursor in normal mode
+* `[ctrl]+[s]` decrease number under cursor in normal mode
+* `[ctrl]+[i]` go to previous location in jump list 
+* `[ctrl]+[o]` go to next location in jump list 
+
 ### Splitting a Window 
 
 * `[space]+[%]` split window vertically
