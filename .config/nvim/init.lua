@@ -27,6 +27,7 @@ require("konze.plugins.nvim-dap-python")
 require("konze.plugins.copilot")
 require("konze.plugins.copilot-cmp")
 require("konze.plugins.markdown_config")
+require("konze.plugins.chatgpt")
 
 require("konze.core.autocommands")
 

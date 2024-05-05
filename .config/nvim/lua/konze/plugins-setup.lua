@@ -138,6 +138,17 @@ return packer.startup(function(use)
     -- diffview
     use("sindrets/diffview.nvim")
 
+    -- chat-gpt
+    use({
+        "jackMort/ChatGPT.nvim", 
+        requires = {
+            "MunifTanjim/nui.nvim",
+            "nvim-lua/plenary.nvim",
+            "folke/trouble.nvim",
+            "nvim-telescope/telescope.nvim"
+        }
+    })
+
     if packer_bootstrap then
         require("packer").sync()
     end
