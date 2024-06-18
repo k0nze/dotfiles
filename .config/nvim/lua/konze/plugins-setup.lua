@@ -38,9 +38,6 @@ return packer.startup(function(use)
     use("tjdevries/colorbuddy.nvim")
     use("svrana/neosolarized.nvim")
 
-    -- vim tmux navigator
-    --use("christoomey/vim-tmux-navigator")
-
     -- maximize vim windows
     use("szw/vim-maximizer")
 

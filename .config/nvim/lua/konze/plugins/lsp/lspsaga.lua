@@ -38,5 +38,8 @@ saga.setup({
             quit = "<esc>",
             jump = "<CR>",
         }
+    },
+    ui = {
+        code_action = '◉'
     }
 })
