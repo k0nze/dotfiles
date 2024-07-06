@@ -49,7 +49,7 @@ cmp.setup({
         end),
     }),
     sources = {
-        { name = "copilot" }, -- copilot
+        --{ name = "copilot" }, -- copilot
         { name = "nvim_lsp" }, -- lsp 
         { name = "luasnip" }, -- snippets
         { name = "buffer" }, -- text within current buffer
@@ -71,7 +71,7 @@ cmp.setup({
     sorting = {
         priority_weight = 2,
         comparators = {
-            require("copilot_cmp.comparators").prioritize,
+            --require("copilot_cmp.comparators").prioritize,
 
             -- Below is the default comparitor list and order for nvim-cmp
             cmp.config.compare.offset,

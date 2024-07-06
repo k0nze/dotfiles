@@ -129,8 +129,8 @@ return packer.startup(function(use)
     use("rcarriga/nvim-dap-ui")
 
     -- copilot
-    use("zbirenbaum/copilot.lua")
-    use("zbirenbaum/copilot-cmp")
+    --use("zbirenbaum/copilot.lua")
+    --use("zbirenbaum/copilot-cmp")
 
     -- diffview
     use("sindrets/diffview.nvim")
