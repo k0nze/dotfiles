@@ -306,6 +306,10 @@ When neovim gets updated run the following commands in neovim and make sure to s
 * `[ctrl]+[x]+[↑]` increase pane size up
 * `[ctrl]+[x]+[↓]` increase pane size up
 
+### Kill a Split with its process
+
+* `[ctrl]+[x]+[>]` open context menu and choose kill  
+
 ### Command Mode
 * `[ctrl]+[x]+[:]` enter tmux command mode 
 
