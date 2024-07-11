@@ -31,7 +31,14 @@ local python_root_files = {
 lspconfig["pyright"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
-    root_dir = lspconfig.util.root_pattern(unpack(python_root_files))
+    root_dir = lspconfig.util.root_pattern(unpack(python_root_files)),
+    settings = {
+        python = {
+            analysis = {
+                typeCheckingMode = "off"
+            }
+        }
+    }
 })
 
 lspconfig["clangd"].setup({
