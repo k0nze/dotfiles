@@ -63,7 +63,11 @@ return packer.startup(function(use)
     use("hrsh7th/cmp-path")
 
     -- snippets
-    use("L3MON4D3/LuaSnip") -- snippet engine
+    use({
+        "L3MON4D3/LuaSnip",
+        tag = "v2.3.0",
+        run = "make install_jsregexp",
+    })
     use("saadparwaiz1/cmp_luasnip") -- for auto completion
     use("rafamadriz/friendly-snippets") -- useful snippets
 
@@ -145,6 +149,18 @@ return packer.startup(function(use)
             "nvim-telescope/telescope.nvim"
         }
     })
+
+    -- openscad
+    use {
+        "salkin-mada/openscad.nvim",
+        config = function ()
+            require('openscad')
+            -- load snippets, note requires
+            vim.g.openscad_load_snippets = true
+        end,
+        requires = "L3MON4D3/LuaSnip"
+    }
+
 
     if packer_bootstrap then
         require("packer").sync()

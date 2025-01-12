@@ -1,5 +1,5 @@
-local setup, notebook = pcall(require, "notebook")
-if not setup then
+local status, notebook = pcall(require, "notebook")
+if not status then
     return
 end
 
