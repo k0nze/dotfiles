@@ -13,8 +13,9 @@ if not luasnip_status then
     return
 end
 
--- make rafamadriz/friendly-snippets work
-require("luasnip.loaders.from_vscode").lazy_load()
+-- step arguments
+vim.keymap.set({"i", "s"}, "<C-L>", function() luasnip.jump( 1) end, {silent = true})
+vim.keymap.set({"i", "s"}, "<C-H>", function() luasnip.jump(-1) end, {silent = true})
 
 vim.opt.completeopt = "menu,menuone,noselect"
 
