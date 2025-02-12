@@ -1,4 +1,4 @@
-require("konze.language-tool-credentials")
+--require("konze.language-tool-credentials")
 
 local keymap = vim.keymap -- for conciseness
 

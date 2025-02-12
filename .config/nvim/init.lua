@@ -32,6 +32,6 @@ require("konze.plugins.openscad")
 
 require("konze.core.autocommands")
 
-vim.api.nvim_command('colorscheme neosolarized')
+--vim.api.nvim_command('colorscheme neosolarized')
 
 print("nvim ready!")

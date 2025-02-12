@@ -36,7 +36,19 @@ return packer.startup(function(use)
 
     -- color scheme
     use("tjdevries/colorbuddy.nvim")
-    use("svrana/neosolarized.nvim")
+    --use("svrana/neosolarized.nvim")
+    use {
+        'maxmx03/solarized.nvim',
+        config = function()
+          vim.o.background = 'dark'
+          ---@type solarized
+          local solarized = require('solarized')
+          vim.o.termguicolors = true
+          vim.o.background = 'dark'
+          solarized.setup({})
+          vim.cmd.colorscheme 'solarized'
+        end
+    }
 
     -- maximize vim windows
     use("szw/vim-maximizer")

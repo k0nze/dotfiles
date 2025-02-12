@@ -18,12 +18,12 @@ mason_lspconfig.setup({
         --"grammarly",
         --"jsonls",
         "marksman",
-        "rust_analyzer",
+        --"rust_analyzer",
         "pyright",
         "lua_ls",
-        "cmake",
+        --"cmake",
         "clangd",
-        "ltex",
+        --"ltex",
     }
 })
 

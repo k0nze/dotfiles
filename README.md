@@ -80,9 +80,9 @@ ln -s ${DOTFILES_REPO}/.config/tmux-powerline ${XDG_CONFIG_HOME}/tmux-powerline
 ```
 
 ```
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt update
-sudo apt install tree fzf ripgrep libevent-dev build-essential automake libncurses5-dev bison flex
+sudo apt install tree fzf ripgrep libevent-dev build-essential automake libncurses5-dev bison flex nodejs npm pkg-config cmake
+sudo npm i -g tree-sitter-cli
 sudo mkdir -p /opt/neovim/bin
 sudo wget https://github.com/neovim/neovim/releases/download/${LATEST_VERSION}/nvim.appimage -O /opt/neovim/nvim.appimage
 sudo chmod +x /opt/neovim/nvim.appimage 
