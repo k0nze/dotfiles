@@ -21,6 +21,12 @@ lualine.setup({
     options = {
         theme = lualine_solarized_dark,
         disabled_filetypes = { "packer", "NvimTree" }
+    },
+    lualine_b = {
+        {
+            require("micropython_nvim").statusline,
+            cond = package.loaded["micropython_nvim"] and require("micropython_nvim").exists,
+        },
     }
 })
 

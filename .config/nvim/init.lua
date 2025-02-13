@@ -29,6 +29,7 @@ require("konze.plugins.nvim-dap-python")
 --require("konze.plugins.copilot-cmp")
 require("konze.plugins.markdown_config")
 require("konze.plugins.openscad")
+require("konze.plugins.micropython")
 
 require("konze.core.autocommands")
 

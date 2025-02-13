@@ -122,6 +122,11 @@ return packer.startup(function(use)
     --use("meatballs/notebook.nvim")
     --use("meatballs/magma-nvim")
 
+    -- micropython
+    use {
+        "jim-at-jibba/micropython.nvim",
+        requires = { "akinsho/toggleterm.nvim", "stevearc/dressing.nvim" },
+    }
     -- tabs
     use({"akinsho/bufferline.nvim", requires = "nvim-tree/nvim-web-devicons"})
     use("moll/vim-bbye") -- for closing tabs
