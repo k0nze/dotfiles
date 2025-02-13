@@ -328,6 +328,7 @@ In the iterm2 preferences set "General > Selection > [x] Applications in Termina
 
 * [Vim un/indent lines](https://learnbyexample.github.io/tips/vim-tip-2/)
 * [Vim increase/decrease numbers](https://learnbyexample.github.io/tips/vim-tip-1/)
+* [keyd tutorial](https://wiki.ethanppl.com/blog/2024/09/08/keyd/)
 
 # TODOs
 ## neovim
