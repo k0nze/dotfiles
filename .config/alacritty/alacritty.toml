@@ -1,0 +1,13 @@
+# [general]
+# solarized dark theme
+import = ["~/.config/alacritty/themes/themes/solarized_dark.toml"]
+
+[window]
+opacity = 0.85
+
+[font]
+size = 9
+#normal.family = "Caskaydia Nerd Font Mono"
+#bold.family = "Caskaydia Nerd Font Mono"
+#italic.family = "Caskaydia Nerd Font Mono"
+#bold_italic.family = "Caskaydia Nerd Font"
