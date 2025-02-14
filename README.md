@@ -143,6 +143,10 @@ map K goForward
 map Q removeTab
 ```
 
+### Albert
+
+[Albert install instructions](https://software.opensuse.org/download/package.iframe?project=home:manuelschneid3r&package=albert&acolor=00cccc&hcolor=00aaaa)
+
 ### Node.js for Copilot
 
 ```
@@ -323,7 +327,6 @@ When neovim gets updated run the following commands in neovim and make sure to s
 
 In the iterm2 preferences set "General > Selection > [x] Applications in Terminal may access clipboard"
 
-
 # Useful Links
 
 * [Vim un/indent lines](https://learnbyexample.github.io/tips/vim-tip-2/)
@@ -333,15 +336,15 @@ In the iterm2 preferences set "General > Selection > [x] Applications in Termina
 # TODOs
 ## neovim
 
-[ ] persist
-[ ] telescope pick buffer 
-[ ] lspsaga keymap 
-[ ] python debugger (nvim-dap)
-[ ] ipython notebooks, setup magma [https://github.com/dccsillag/magma-nvim](https://github.com/dccsillag/magma-nvim) (seems to be challenging to display images in the terminal)
-[ ] outline for popups 
-[ ] latex setup 
-[ ] rust setup [https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/](https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/)
-[ ] c setup 
-[ ] c++ setup 
+- [ ] persist
+- [ ] telescope pick buffer 
+- [ ] lspsaga keymap 
+- [ ] python debugger (nvim-dap)
+- [ ] ipython notebooks, setup magma [https://github.com/dccsillag/magma-nvim](https://github.com/dccsillag/magma-nvim) (seems to be challenging to display images in the terminal)
+- [ ] outline for popups 
+- [ ] latex setup 
+- [ ] rust setup [https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/](https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/)
+- [ ] c setup 
+- [ ] c++ setup 
 
 
