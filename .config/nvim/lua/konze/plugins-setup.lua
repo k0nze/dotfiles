@@ -36,7 +36,6 @@ return packer.startup(function(use)
 
     -- color scheme
     use("tjdevries/colorbuddy.nvim")
-    --use("svrana/neosolarized.nvim")
     use {
         'maxmx03/solarized.nvim',
         config = function()
@@ -49,9 +48,6 @@ return packer.startup(function(use)
           vim.cmd.colorscheme 'solarized'
         end
     }
-
-    -- maximize vim windows
-    use("szw/vim-maximizer")
 
     -- line and block comments
     use("numToStr/Comment.nvim")
@@ -109,18 +105,11 @@ return packer.startup(function(use)
     -- rust
     use("simrat39/rust-tools.nvim")
 
-    -- minimap
-    use("gorbit99/codewindow.nvim")
-
     -- restore last cursor postion
     use("ethanholz/nvim-lastplace")
 
     -- automatically close parenthesis etc.
     use("windwp/nvim-autopairs")
-
-    -- support for ipynb files (not yet working)
-    --use("meatballs/notebook.nvim")
-    --use("meatballs/magma-nvim")
 
     -- micropython
     use {
@@ -142,9 +131,6 @@ return packer.startup(function(use)
 
     -- git signs
     use("lewis6991/gitsigns.nvim")
-
-    -- toggle term
-    use("akinsho/toggleterm.nvim")
 
     -- nvim-dap (debugger adapter protocol)
     use("mfussenegger/nvim-dap")

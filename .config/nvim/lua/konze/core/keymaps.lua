@@ -30,9 +30,19 @@ keymap.set("n", "<leader>j", "<C-w><down>")
 keymap.set("n", "<leader>l", "<C-w><right>")
 -- move to window on the right
 keymap.set("n", "<leader>h", "<C-w><left>")
--- maximize / restore current window (vim-maximizer)
-keymap.set("n", "<leader>m", ":MaximizerToggle<CR>")
 
+-- buffer line
+local opts = { noremap = true, silent = true }
+
+keymap.set("n", "<S-l>", "<Cmd>BufferLineCycleNext<CR>", opts)
+keymap.set("n", "<S-h>", "<Cmd>BufferLineCyclePrev<CR>", opts)
+keymap.set("n", "<S-q>", "<Cmd>Bdelete<CR>", opts)
+--keymap("n", "<S-n>", "<Cmd>enew<CR>", opts)
+keymap.set("n", "<S-p>", "<C-o>", opts)
+keymap.set("n", "<S-n>", "<C-i>", opts)
+
+keymap.set("n", "<C-l>", "<Cmd>BufferLineMoveNext<CR>", opts)
+keymap.set("n", "<C-h>", "<Cmd>BufferLineMovePrev<CR>", opts)
 
 -- save file
 keymap.set("n", "<leader>s", ":w<CR>")
@@ -74,3 +84,10 @@ keymap.set("n", "di", ":lua require('dap').step_into()<CR>")
 keymap.set("n", "do", ":lua require('dap').step_out()<CR>")
 keymap.set("n", "dq", ":lua require('dap').disconnect({ terminateDebuggee = true })<CR>")
 
+-- micropython
+keymap.set("n", "mr", ":MPRun<CR>")
+keymap.set("n", "mu", ":MPUpload<CR>")
+keymap.set("n", "mU", ":MPUploadAll<CR>")
+
+-- trouble
+--keymap.set("n", "<leader>t", "TroubleToggle<CR>")
