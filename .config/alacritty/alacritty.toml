@@ -1,6 +1,6 @@
 # [general]
 # solarized dark theme
-import = ["~/.config/alacritty/themes/themes/solarized_dark.toml"]
+import = ["~/.config/alacritty/solarized_dark.toml"]
 
 [window]
 opacity = 0.85
