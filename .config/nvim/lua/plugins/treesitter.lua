@@ -1,0 +1,28 @@
+return {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+        ensure_installed = {
+            "json",
+             "yaml",
+             "markdown",
+             "markdown_inline",
+             "bash",
+             "lua",
+             "vim",
+             "dockerfile",
+             "gitignore",
+             "python",
+             "rust",
+             "make",
+             "cpp",
+             "c",
+             "cmake",
+             "latex",
+             "bibtex",
+        },
+        auto_install = true,
+        highlight = { enable = true },
+        indent = { enable = true },
+        autotag = { enable = true },
+    },
+}
