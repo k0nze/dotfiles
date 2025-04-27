@@ -54,4 +54,16 @@ keymap.set("n", "th", "<cmd>Telescope help_tags<cr>") -- list available help tag
 -- set keymap to lua function
 --vim.keymap.set("n", "hh", function()  end)
 
+-- bufferline
+local opts = { noremap = true, silent = true }
+
+keymap.set("n", "<S-l>", "<Cmd>BufferLineCycleNext<CR>", opts)
+keymap.set("n", "<S-h>", "<Cmd>BufferLineCyclePrev<CR>", opts)
+keymap.set("n", "<S-q>", "<Cmd>Bdelete<CR>", opts)
+--keymap.set("n", "<S-n>", "<Cmd>enew<CR>", opts)
+keymap.set("n", "<S-p>", "<C-o>", opts)
+keymap.set("n", "<S-n>", "<C-i>", opts)
+
+keymap.set("n", "<C-l>", "<Cmd>BufferLineMoveNext<CR>", opts)
+keymap.set("n", "<C-h>", "<Cmd>BufferLineMovePrev<CR>", opts)
 
