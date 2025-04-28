@@ -27,6 +27,10 @@ return {
         -- See :h blink-cmp-config-keymap for defining your own keymap
         keymap = { 
             preset = 'default',
+            ['<C-k>'] = { 'select_prev', 'fallback' },
+            ['<C-j>'] = { 'select_next', 'fallback' },
+            ['<C-l>'] = { 'show_documentation', 'fallback' },
+            ['<C-h>'] = { 'hide_documentation', 'fallback' },
             ['<CR>'] = { 'accept', 'fallback' },
         },
 
@@ -38,7 +42,7 @@ return {
 
         -- (Default) Only show the documentation popup when manually triggered
         completion = { 
-            ghost_text = { enabled = true },
+            ghost_text = { enabled = false },
             documentation = { auto_show = false },
             menu = {
                 draw = {
