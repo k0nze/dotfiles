@@ -1,5 +1,3 @@
-print("lsp")
-
 local keymap = vim.keymap -- for conciseness
 
 local on_attach = function(client, bufnr)
