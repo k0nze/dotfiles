@@ -2,6 +2,7 @@
 require("config.core")
 require("config.keymaps")
 require("config.lazy")
-require("config.lsp")
+--require("config.mason")
+--require("config.lsp")
 
-print("nvim ready!")
+--print("nvim ready!")
