@@ -1,3 +1,5 @@
+-- adapted from: https://github.com/jakobwesthoff/nvim-from-scratch/blob/session/04/lua/plugins/lsp.lua
+
 return {
     -- Main LSP Configuration
     'neovim/nvim-lspconfig',
@@ -82,11 +84,11 @@ return {
 
           -- Rename the variable under your cursor.
           --  Most Language Servers support renaming across files, etc.
-          map('<leader>cr', vim.lsp.buf.rename, '[R]e[n]ame')
+          map('gR', vim.lsp.buf.rename, '[R]e[n]ame')
 
           -- Execute a code action, usually your cursor needs to be on top of an error
           -- or a suggestion from your LSP for this to activate.
-          map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction', { 'n', 'x' })
+          map('ga', vim.lsp.buf.code_action, '[C]ode [A]ction', { 'n', 'x' })
 
           -- WARN: This is not Goto Definition, this is Goto Declaration.
           --  For example, in C this would take you to the header.
@@ -194,10 +196,10 @@ return {
       local servers = {
         bashls = {},
         marksman = {},
-        -- clangd = {},
+        clangd = {},
         -- gopls = {},
-        -- pyright = {},
-        -- rust_analyzer = {},
+        pyright = {},
+        rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
