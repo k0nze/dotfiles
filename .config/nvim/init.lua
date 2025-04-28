@@ -6,3 +6,6 @@ require("config.lazy")
 --require("config.lsp")
 
 --print("nvim ready!")
+
+-- for tutorials
+--vim.cmd("ShowkeysToggle")

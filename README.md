@@ -158,28 +158,6 @@ CaskaydiaCoveNerdFont (for Windows Terminal)
 MesloLG NF (for iTerm2)
 Fix colors for zsh-autosuggestions: [https://github.com/zsh-users/zsh-autosuggestions/issues/416#issuecomment-486516333](https://github.com/zsh-users/zsh-autosuggestions/issues/416#issuecomment-486516333)
 
-
-# Cheat Sheet
-## shkd (macOS only)
-### Change Window Focus
-
-* `[shift]+[left alt]+[h]`: change focus to the next windows on the left (west)
-* `[shift]+[left alt]+[j]`: change focus to the next windows on the bottom (south)
-* `[shift]+[left alt]+[k]`: change focus to the next windows on the top (north)
-* `[shift]+[left alt]+[l]`: change focus to the next windows on the right (east)
-
-### Flip Windows Layout Along an Axis
-
-* `[shift]+[left alt]+[x]`: flip windows along x-axis 
-* `[shift]+[left alt]+[y]`: flip windows along y-axis
-
-### Increase Size of Currently Focused Window
-
-* `[shift]+[left ctrl]+[h]` increase window to the left
-* `[shift]+[left ctrl]+[j]` increase window to the bottom
-* `[shift]+[left ctrl]+[k]` increase window to the top
-* `[shift]+[left ctrl]+[l]` increase window to the right
-
 ## neovim
 
 ### basic
@@ -226,6 +204,11 @@ Fix colors for zsh-autosuggestions: [https://github.com/zsh-users/zsh-autosugges
 
 * `[space]+[s]` save file
 * `[space]+[q]` close file
+
+### Inscremental selection
+
+* `[s]` select and incremment
+* `[shfit]+[s]` decrement selection
 
 ### git mergetool
 
@@ -286,10 +269,9 @@ Change `LanguageTool_username` and `LanguageTool_apiKey`.
 When neovim gets updated run the following commands in neovim and make sure to set GCC as default compiler:
 
 ```
-:PackerSync
+:Lazy
 :TSUpdate
 :MasonUpdate
-:Copilot auth
 ```
 
 ## tmux
@@ -331,16 +313,4 @@ In the iterm2 preferences set "General > Selection > [x] Applications in Termina
 
 # TODOs
 ## neovim
-
-[ ] persist
-[ ] telescope pick buffer 
-[ ] lspsaga keymap 
-[ ] python debugger (nvim-dap)
-[ ] ipython notebooks, setup magma [https://github.com/dccsillag/magma-nvim](https://github.com/dccsillag/magma-nvim) (seems to be challenging to display images in the terminal)
-[ ] outline for popups 
-[ ] latex setup 
-[ ] rust setup [https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/](https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/)
-[ ] c setup 
-[ ] c++ setup 
-
 
