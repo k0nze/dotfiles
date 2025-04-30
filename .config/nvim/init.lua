@@ -2,9 +2,8 @@
 require("config.core")
 require("config.keymaps")
 require("config.lazy")
---require("config.mason")
---require("config.lsp")
 
+-- for debugging
 --print("nvim ready!")
 
 -- for tutorials

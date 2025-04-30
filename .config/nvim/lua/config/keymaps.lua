@@ -67,3 +67,6 @@ keymap.set("n", "<S-n>", "<C-i>", opts)
 keymap.set("n", "<C-l>", "<Cmd>BufferLineMoveNext<CR>", opts)
 keymap.set("n", "<C-h>", "<Cmd>BufferLineMovePrev<CR>", opts)
 
+
+-- wrapping
+keymap.set("n", "<leader>w", "<Cmd>ToggleWrapMode<CR>", opts)
