@@ -68,5 +68,14 @@ keymap.set("n", "<C-l>", "<Cmd>BufferLineMoveNext<CR>", opts)
 keymap.set("n", "<C-h>", "<Cmd>BufferLineMovePrev<CR>", opts)
 
 
+-- jump to last cursor position
+keymap.set("n", "gb", "<C-o>", opts)
+
 -- wrapping
 keymap.set("n", "<leader>w", "<Cmd>ToggleWrapMode<CR>", opts)
+
+-- tiny code actions
+keymap.set("n", "ga", function()
+    require("tiny-code-action").code_action()
+end, opts)
+
