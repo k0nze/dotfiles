@@ -235,6 +235,8 @@ return {
         marksman = {},
         clangd = {},
         pyright = {},
+        verible = {},
+        rust_hdl = {},
         ltex = ltex_opts, 
         lua_ls = {
           -- cmd = { ... },
