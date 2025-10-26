@@ -1,0 +1,8 @@
+{
+    "library": {
+        "prefix": "lib",
+        "body": [
+            "library ${1:lib};"
+        ]
+    }
+}

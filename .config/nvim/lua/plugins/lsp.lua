@@ -214,7 +214,7 @@ return {
       if file_exists(language_tool_credentials_path) then
         require("config.language-tool-credentials")
         ltex_opts["settings"]["ltex"]["languageToolOrg"] = {
-            username = LanguageTool_username,  
+            username = LanguageTool_username,
             apiKey = LanguageTool_ApiKey,
         }
       end
