@@ -4,5 +4,50 @@
         "body": [
             "library ${1:lib};"
         ]
+    },
+
+    "entity": {
+        "prefix": "ent",
+        "body": [
+            "entity ${1:ent} is",
+            "   port (",
+            "       ${2:signal_name} : ${3|in,out|} ${4:signal_type}",
+            "   );",
+            "end entity;"
+        ]
+    },
+
+    "downto": {
+        "prefix": "dow",
+        "body": [
+            "downto"
+        ]
+    },
+
+    "generic": {
+        "prefix": "gen",
+        "body": [
+            "generic (",
+            "    ${1:generic} : ${2|NATURAL,INTEGER,BOOLEAN|} := ${3:default}",
+            ");"
+        ]
+    },
+
+    "component": {
+        "prefix": "comp",
+        "body": [
+            "component ${1:component} is",
+            "begin",
+            "end component;"
+        ]
+    },
+
+    "architecture": {
+        "prefix": "arch",
+        "body": [
+            "architecture ${1:behavior} of ${2:entity} is",
+            "begin",
+            "end architecture;"
+        ]
     }
 }

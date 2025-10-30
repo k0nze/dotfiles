@@ -233,6 +233,7 @@ return {
       local servers = {
         bashls = {},
         marksman = {},
+        checkmake = {},
         clangd = {},
         pyright = {},
         verible = {},

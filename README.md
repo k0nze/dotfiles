@@ -310,6 +310,7 @@ In the iterm2 preferences set "General > Selection > [x] Applications in Termina
 
 * [Vim un/indent lines](https://learnbyexample.github.io/tips/vim-tip-2/)
 * [Vim increase/decrease numbers](https://learnbyexample.github.io/tips/vim-tip-1/)
+* [blink.cmp snippets](https://cmp.saghen.dev/configuration/snippets)
 
 # TODOs
 ## neovim
