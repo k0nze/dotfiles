@@ -42,4 +42,4 @@ luac.out
 
 
 lazy-lock.json
-
+lua/config/language-tool-credentials.lua
