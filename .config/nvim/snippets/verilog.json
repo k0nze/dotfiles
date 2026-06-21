@@ -1,0 +1,32 @@
+{
+    "assign": {
+        "prefix": "assign",
+        "body": [
+            "assign ${1:lhs} = ${2:rhs};"
+        ],
+        "description": "Continuous assignment"
+    },
+    "posedge": {
+        "prefix": "posedge",
+        "body": [
+            "posedge ${1:clk}"
+        ],
+        "description": "Positive edge event"
+    },
+    "negedge": {
+        "prefix": "negedge",
+        "body": [
+            "negedge ${1:rst_n}"
+        ],
+        "description": "Negative edge event"
+    },
+    "task": {
+        "prefix": "task",
+        "body": [
+            "task ${1:name}(${2:arguments});",
+            "\t$0",
+            "endtask"
+        ],
+        "description": "Task declaration"
+    }
+}

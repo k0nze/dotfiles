@@ -1,0 +1,59 @@
+{
+    "assign": {
+        "prefix": "assign",
+        "body": [
+            "assign ${1:lhs} = ${2:rhs};"
+        ],
+        "description": "Continuous assignment"
+    },
+    "posedge": {
+        "prefix": "posedge",
+        "body": [
+            "posedge ${1:clk}"
+        ],
+        "description": "Positive edge event"
+    },
+    "negedge": {
+        "prefix": "negedge",
+        "body": [
+            "negedge ${1:rst_n}"
+        ],
+        "description": "Negative edge event"
+    },
+    "always_ff": {
+        "prefix": "always_ff",
+        "body": [
+            "always_ff @(${1:posedge clk}) begin",
+            "\t$0",
+            "end"
+        ],
+        "description": "Clocked always block"
+    },
+    "always_comb": {
+        "prefix": "always_comb",
+        "body": [
+            "always_comb begin",
+            "\t$0",
+            "end"
+        ],
+        "description": "Combinational always block"
+    },
+    "always_latch": {
+        "prefix": "always_latch",
+        "body": [
+            "always_latch begin",
+            "\t$0",
+            "end"
+        ],
+        "description": "Latch always block"
+    },
+    "class": {
+        "prefix": "class",
+        "body": [
+            "class ${1:name};",
+            "\t$0",
+            "endclass"
+        ],
+        "description": "Class declaration"
+    }
+}

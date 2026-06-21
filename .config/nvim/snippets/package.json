@@ -2,7 +2,9 @@
     "name": "personal-snippets",
     "contributes":  {
         "snippets": [
-            { "language": "vhdl", "path": "./vhdl.json"}
+            { "language": "vhdl", "path": "./vhdl.json"},
+            { "language": "verilog", "path": "./verilog.json"},
+            { "language": "systemverilog", "path": "./systemverilog.json"}
         ]
     }
 }

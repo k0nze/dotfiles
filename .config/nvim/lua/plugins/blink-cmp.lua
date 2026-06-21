@@ -56,6 +56,25 @@ return {
         -- elsewhere in your config, without redefining it, due to `opts_extend`
         sources = {
             default = { 'lsp', 'path', 'snippets', 'buffer' },
+            providers = {
+                snippets = {
+                    transform_items = function(_, items)
+                        return vim.tbl_filter(function(item)
+                            local insert_text = item.insertText or ""
+
+                            if item.label:match("^`?uvm_") then
+                                return false
+                            end
+
+                            if insert_text:match("begin%s*:") or insert_text:match("end%w+%s*:") then
+                                return false
+                            end
+
+                            return true
+                        end, items)
+                    end,
+                },
+            },
         },
 
         -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
