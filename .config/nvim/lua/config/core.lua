@@ -44,6 +44,15 @@ opt.iskeyword:append("-")
 -- ruler
 opt.colorcolumn = "88"
 
+vim.filetype.add({
+    extension = {
+        v = "verilog",
+        vh = "verilog",
+        sv = "systemverilog",
+        svh = "systemverilog",
+    },
+})
+
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`

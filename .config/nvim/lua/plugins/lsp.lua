@@ -251,7 +251,10 @@ return {
             checkmake = {},
             clangd = {},
             pyright = {},
-            verible = {},
+            verible = {
+                cmd = { 'verible-verilog-ls' },
+                filetypes = { 'verilog', 'systemverilog' },
+            },
             vhdl_ls = {},
             ltex = ltex_opts,
             lua_ls = {

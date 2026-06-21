@@ -23,6 +23,7 @@ return {
                 "cmake",
                 "latex",
                 "bibtex",
+                "systemverilog",
             },
             auto_install = false,
             highlight = { enable = true },
