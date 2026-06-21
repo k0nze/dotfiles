@@ -11,6 +11,9 @@ return {
     ---@module "neo-tree"
     ---@type neotree.Config?
     opts = {
+        filesystem = {
+            use_libuv_file_watcher = true,
+        },
         window = {
             width = 28
         }
