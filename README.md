@@ -67,7 +67,7 @@ ln -s ${DOTFILES_REPO}/.config/tmux-powerline ${XDG_CONFIG_HOME}/tmux-powerline
 ```
 
 ```
-brew install tmux neovim tree fzf ripgrep fd npm jq
+brew install tmux neovim tree fzf ripgrep fd npm jq imagemagick jstkdng/programs/ueberzugpp
 ```
 
 ## Setup Ubuntu

@@ -236,6 +236,116 @@ return {
 
         -- capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
+        local function find_python_venv(root_dir)
+            local dir = root_dir or vim.uv.cwd()
+
+            while dir and dir ~= '' do
+                for _, name in ipairs({ '.venv', 'venv' }) do
+                    local python = table.concat({ dir, name, 'bin', 'python' }, '/')
+
+                    if vim.fn.executable(python) == 1 then
+                        return {
+                            root = dir,
+                            name = name,
+                            path = table.concat({ dir, name }, '/'),
+                            python = python,
+                        }
+                    end
+                end
+
+                local parent = vim.fs.dirname(dir)
+
+                if parent == dir then
+                    break
+                end
+
+                dir = parent
+            end
+
+            return nil
+        end
+
+        local function pyright_settings_for_venv(venv)
+            return {
+                python = {
+                    pythonPath = venv.python,
+                    venvPath = venv.root,
+                    venv = venv.name,
+                },
+            }
+        end
+
+        local function configure_pyright_project_env(config, root_dir)
+            local venv = find_python_venv(root_dir or config.root_dir)
+
+            if not venv then
+                return
+            end
+
+            config.settings = vim.tbl_deep_extend('force', config.settings or {}, pyright_settings_for_venv(venv))
+        end
+
+        local function pyright_on_init(client)
+            configure_pyright_project_env(client.config, client.config.root_dir)
+
+            client.settings = vim.tbl_deep_extend('force', client.settings or {}, client.config.settings or {})
+            client:notify('workspace/didChangeConfiguration', { settings = client.config.settings })
+        end
+
+        vim.api.nvim_create_user_command('PyrightProjectEnv', function()
+            local buffer_name = vim.api.nvim_buf_get_name(0)
+            local start_dir = buffer_name ~= '' and vim.fs.dirname(buffer_name) or vim.uv.cwd()
+            local venv = find_python_venv(start_dir)
+
+            if not venv then
+                vim.notify('No .venv or venv with bin/python found for this project.', vim.log.levels.WARN)
+                return
+            end
+
+            vim.notify(
+                table.concat({
+                    'Pyright project environment:',
+                    'pythonPath: ' .. venv.python,
+                    'venvPath: ' .. venv.root,
+                    'venv: ' .. venv.name,
+                }, '\n'),
+                vim.log.levels.INFO
+            )
+        end, {
+            desc = 'Show the Python virtual environment detected for Pyright',
+        })
+
+        vim.api.nvim_create_user_command('PyrightUseProjectEnv', function()
+            local buffer = vim.api.nvim_get_current_buf()
+            local buffer_name = vim.api.nvim_buf_get_name(buffer)
+            local start_dir = buffer_name ~= '' and vim.fs.dirname(buffer_name) or vim.uv.cwd()
+            local venv = find_python_venv(start_dir)
+
+            if not venv then
+                vim.notify('No .venv or venv with bin/python found for this project.', vim.log.levels.WARN)
+                return
+            end
+
+            local clients = vim.lsp.get_clients({ bufnr = buffer, name = 'pyright' })
+
+            if vim.tbl_isempty(clients) then
+                vim.notify('No running Pyright client for this buffer. Open a Python file or run :LspRestart pyright.', vim.log.levels.WARN)
+                return
+            end
+
+            local settings = pyright_settings_for_venv(venv)
+
+            for _, client in ipairs(clients) do
+                client.config.settings = vim.tbl_deep_extend('force', client.config.settings or {}, settings)
+                client.settings = vim.tbl_deep_extend('force', client.settings or {}, settings)
+                client:notify('workspace/didChangeConfiguration', { settings = client.config.settings })
+            end
+
+            vim.notify('Pyright now uses ' .. venv.python, vim.log.levels.INFO)
+        end, {
+            desc = 'Reconfigure the running Pyright client to use the project virtual environment',
+        })
+
         -- Enable the following language servers
         --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
         --
@@ -250,7 +360,20 @@ return {
             marksman = {},
             checkmake = {},
             clangd = {},
-            pyright = {},
+            pyright = {
+                before_init = function(_, config)
+                    configure_pyright_project_env(config, config.root_dir)
+                end,
+                on_init = pyright_on_init,
+                settings = {
+                    python = {
+                        analysis = {
+                            autoSearchPaths = true,
+                            useLibraryCodeForTypes = true,
+                        },
+                    },
+                },
+            },
             verible = {
                 cmd = { 'verible-verilog-ls' },
                 filetypes = { 'verilog', 'systemverilog' },
