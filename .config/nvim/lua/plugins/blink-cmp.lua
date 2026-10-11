@@ -57,6 +57,43 @@ return {
         sources = {
             default = { 'lsp', 'path', 'snippets', 'buffer' },
             providers = {
+                lsp = {
+                    score_offset = 2,
+                    transform_items = function(_, items)
+                        local total, count = 0, 0
+                        for _, item in ipairs(items) do
+                            if
+                                item.client_name == 'clangd'
+                                and type(item.lsp_score) == 'number'
+                            then
+                                total = total + item.lsp_score
+                                count = count + 1
+                            end
+                        end
+
+                        if count == 0 then
+                            return items
+                        end
+
+                        local average = total / count
+                        for _, item in ipairs(items) do
+                            if
+                                item.client_name == 'clangd'
+                                and type(item.lsp_score) == 'number'
+                            then
+                                local bonus = math.floor((item.lsp_score - average) * 100 + 0.5)
+                                bonus = math.max(-6, math.min(6, bonus))
+                                -- This transform can run again as more LSP results arrive.
+                                item.score_offset = (item.score_offset or 0)
+                                    - (item._clangd_rank_bonus or 0)
+                                    + bonus
+                                item._clangd_rank_bonus = bonus
+                            end
+                        end
+
+                        return items
+                    end,
+                },
                 snippets = {
                     transform_items = function(_, items)
                         return vim.tbl_filter(function(item)
@@ -82,7 +119,10 @@ return {
         -- when the Rust fuzzy matcher is not available, by using `implementation = "prefer_rust"`
         --
         -- See the fuzzy documentation for more information
-        fuzzy = { implementation = "prefer_rust_with_warning" }
+        fuzzy = {
+            implementation = "prefer_rust_with_warning",
+            sorts = { 'exact', 'score', 'sort_text' },
+        }
     },
     opts_extend = { "sources.default" }
 }
