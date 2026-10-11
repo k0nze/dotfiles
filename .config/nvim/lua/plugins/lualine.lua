@@ -16,11 +16,8 @@ return {
                 theme = 'solarized_dark',
                 disabled_filetypes = {"neo-tree"}
             },
-            winbar = {
-                lualine_c = { 'navic' },
-            },
-            inactive_winbar = {
-                lualine_c = { 'navic' },
+            sections = {
+                lualine_c = { 'filename', 'navic' },
             },
         })
     end
